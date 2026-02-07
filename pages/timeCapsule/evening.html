@@ -3,10 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="../styles/style.css" />
-  <title>Time Capsule — Evening</title>
-</head>
-<body>
   <header class="site-header">
     <nav class="header-navigation">
       <a href="../index.html">Sonder</a>
@@ -20,19 +16,43 @@
   </header>
 
   <main>
-    <section class="time-section">
-      <h1>Evening</h1>
-      <p>Write a short entry for your evening time capsule.</p>
+    <section id="evening" class="mood-section">
+      <h1 class="hero-header">Good evening 🌙 — time to gently unwind.</h1>
+
+      <section class="affirmation-cards-section" aria-label="affirmation-cards">
+        <ul class="affirmation-cards-container">
+          <li>
+            <article class="affirmation-card">
+              <img class="affirmation-card-image" srcset="../images/tired-long-exposure-rock-formations-sea-sunset.jpg" alt="dusk over sea" />
+              <p>The day is done; you did enough</p>
+            </article>
+          </li>
+          <li>
+            <article class="affirmation-card">
+              <img class="affirmation-card-image" srcset="../images/tired-single-chair-reflecting-water-surface-stormy-day.jpg" alt="lamp and book" />
+              <p>Let go of what you cannot change</p>
+            </article>
+          </li>
+          <li>
+            <article class="affirmation-card">
+              <img class="affirmation-card-image" srcset="../images/tired-sad-contemplative-person-near-lake.jpg" alt="calm lake" />
+              <p>Prepare your heart for rest</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="checklist-section" aria-label="checklist">
+        <h2 class="checklist-header">Evening Checklist</h2>
+        <ul class="checklist">
+          <li><label class="checklist-option"><input type="checkbox" checked> Dim the lights</label></li>
+          <li><label class="checklist-option"><input type="checkbox"> Reflect on one win today</label></li>
+          <li><label class="checklist-option"><input type="checkbox"> Prepare sleep environment</label></li>
+        </ul>
+      </section>
     </section>
   </main>
- <nav>
-    <a href="../moods/anxious.html">Anxious</a>
-    <a href="../moods/driven.html">Driven</a>
-    <a href="../moods/tired.html">Tired</a>
-    <a href="../moods/hopeful.html">Hopeful</a>
+
+  <nav class="footer-navigation">
+    <a href="../index.html">Back</a>
   </nav>
-  <footer class="site-footer">
-    <a href="../../index.html">Back</a>
-  </footer>
-</body>
-</html>
