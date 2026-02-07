@@ -10,7 +10,8 @@ Highlights
 Read the full case study for background, process, and design rationale: [Case Study.md](Case%20Study.md)
 
 and a Sample of some of the designs we've played around with https://stitch.withgoogle.com/projects/10844331319545540294
-Quick start
+
+### Quick start
 1. Open `index.html` in your browser to explore the site locally.
 2. See time capsule pages in the `pages/` folder.
 3. **Our Live Application can be found here** https://sonder-six.vercel.app/ 
