@@ -3,138 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css"
-  />
-  <link rel="stylesheet" href="styles/style.css" />
-  <title>SONDER</title>
+  <title>Sonder, Love, Inward</title>
 </head>
-
 
 <body>
 
-  <header class="site-header"> 
-    <nav class="header-navigation">
-            <div class="hamburger-container">
-                <!-- Hidden checkbox -->
-                <!-- ================= MAIN ================= -->
-                <main>
-                  <section class="mood-links">
-                    <h1 class="hero-header">Choose a mood</h1>
-                    <ul class="mood-links-list">
-                      <li><a class="mood-link" href="pages/driven.html">Driven</a></li>
-                      <li><a class="mood-link" href="pages/relaxed.html">Relaxed</a></li>
-                      <li><a class="mood-link" href="pages/anxious.html">Anxious</a></li>
-                      <li><a class="mood-link" href="pages/tired.html">Tired</a></li>
-                    </ul>
-                  </section>
-                </main>
-    
-    </ul>
- </section>
-</section>
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Sonder</a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./pages/about.html">About</a></li>
+        <li><a href="./pages/contacts.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="./pages/timeCapsule/morning.html">Try Sonder, Be you</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
 
 
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <h1>Love, but inward.</h1>
 
-    <!-- ===== MOOD: ANXIOUS (feature/anxious-mood) ===== -->
-    <section id="anxious" class="mood-section">
-      <!-- anxious hero -->
-      <!-- anxious affirmation cards -->
-      <!-- anxious checklist -->
+
+      <p>
+        Sonder is a quiet space for self-love, designed to meet you where you are,
+        from morning calm to night reflection.
+      </p>
+
+      <a href="./pages/timeCapsule/morning.html" class="primary-cta">
+       Let's get your day started
+      </a>
+
+      <small>No pressure. No fixing. Just presence.</small>
     </section>
 
+    <!-- FEATURES SECTION -->
+    <section class="features">
+      <h2>How Sonder shows up for you</h2>
 
-    <!-- Screen 4- if "mood":"tired" -->
+      <div class="feature-list">
 
-  <section id="tired" class="mood-section">
-      
-      <h1 class="hero-header">It's okay to start slow.</h1>       
+        <article class="feature">
+          <h3>Time Capsules</h3>
+          <p>
+            Morning, afternoon, evening, and night, each moment has its own tone,
+            rhythm, and emotional space.
+          </p>
+        </article>
 
-  
-   <!-- Affirmation cards container -->
-  <section class="affirmation-cards-section" aria-label="affirmation-cards">
+        <article class="feature">
+          <h3>Mood-Led Experience</h3>
+          <p>
+            Whether you feel anxious, driven, tired, or hopeful, your mood shapes
+            the visuals, prompts, and guidance.
+          </p>
+        </article>
 
-        <ul class="affirmation-cards-container">      
-             <!-- Affirmation cards -->
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/tired-sad-contemplative-person-near-lake.jpg" alt="">
-                    <p>"You are worthy of patience, especially from yourself."</p>
-                  </article>
-              </li>
+        <article class="feature">
+          <h3>Gentle Prompts</h3>
+          <p>
+            Thoughtful reflections and quiet advice, never overwhelming,
+            never demanding.
+          </p>
+        </article>
 
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/tired-long-exposure-rock-formations-sea-sunset.jpg"alt="">
-                    <p>"You are not behind; you are on your own path."</p>
-                  </article>
-              </li>
-
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/tired-single-chair-reflecting-water-surface-stormy-day.jpg"alt="">
-                    <p>"You can start again, as many times as you need."</p>
-                  </article>
-              </li>
-        </ul>    
-  </section>
-
-
-
-     <!-- checklist section-->
-    <section class="checklist-section" aria-label="checklist">
-     <h2 class="checklist-header">Small Wins 
-        <span><i class="ph-bold ph-hand-heart"></i></span>
-     </h2>
-
-     <!-- checklist-options -->
-    <ul class="checklist">
-        <li><label class="checklist-option">
-         <input type="checkbox"> Take a deep breath 
-         <span aria-hidden="true"><i class="ph-bold ph-head-circuit"></i></span> 
-        </label></li>
-        
-
-        <li><label class="checklist-option">
-          <input type="checkbox">Listen to your favorite song
-          <span aria-hidden="true"><i class="ph-bold ph-music-notes-simple"></i></span> 
-        </label></li>
-
-        
-        <li><label class="checklist-option">
-            <input type="checkbox"> Stretch or move a little
-            <span aria-hidden="true"><i class="ph-bold ph-person-simple-tai-chi"></i></span> 
-        </label></li>
-    
-    </ul>
+      </div>
     </section>
-</section>
+
+    <!-- OPTIONAL LOVE MONTH / PHILOSOPHY SECTION -->
+    <section class="philosophy">
+      <h2>Love doesn’t always have to be given away</h2>
+      <p>
+        Sonder exists to remind you that showing up for yourself, 
+        softly, honestly, is a form of love too.
+      </p>
+    </section>
 
   </main>
 
-
-  <footer class="site-footer">
-    <nav class="footer-navigation">
-      <a href="#">
-          <i class="ph-bold ph-solar-panel"></i>
-          <span>Driven</span>
-      </a>
-
-      <a href="#">
-          <i class="ph-bold ph-atom"></i>
-          <span>Relaxed</span>
-      </a>
-
-      <a href="#">
-          <i class="ph-bold ph-fire"></i>
-          <span>Anxious</span>
-      </a>
-
-      <a href="#">
-          <i class="ph-bold ph-hourglass-simple-low"></i>
-          <span>Tired</span>
-      </a>
-    </nav>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Sonder. All rights reserved.</p>
   </footer>
-
 
 </body>
 </html>
