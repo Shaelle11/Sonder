@@ -20,4 +20,5 @@ Design details
 See visual direction and token choices in the design documentation: [Design Documentation.md](Design%20Documentation.md)
 
 Credits
-Design & Implementation: Nanji Lakan and Florence Onwuegbuzie
+Design & Implementation: 
+## Nanji Lakan and Florence Onwuegbuzie
