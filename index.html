@@ -3,219 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css"
-  />
-  <link rel="stylesheet" href="styles/style.css" />
-  <title>SONDER</title>
+  <title>Sonder, Love, Inward</title>
 </head>
-
 
 <body>
 
-  <header class="site-header"> 
-    <nav class="header-navigation">
-            <div class="hamburger-container">
-                <!-- Hidden checkbox -->
-                <input type="checkbox" id="toggle-menu">
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Sonder</a>
+      </div>
 
-                <!-- Hamburger icon -->
-                <label for="toggle-menu" class="hamburger">
-                  <i class="ph-bold ph-list"></i>
-                </label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./pages/about.html">About</a></li>
+        <li><a href="./pages/contacts.html">Contact</a></li>
+      </ul>
 
-              <!-- Menu -->
-              <div class="menu">
-                <a href="#driven">Driven</a>
-                <a href="#relaxed">Relaxed</a>
-                <a href="#anxious">Anxious</a>
-                <a href="#tired">Tired</a>
-              </div>
-            </div>
-  
-            <a href="#">Sonder</a> 
-            <a href="#"><i class="ph-bold ph-user-circle"></i></a>
+      <div class="nav-cta">
+        <a href="./pages/timeCapsule/morning.html">Try Sonder, Be you</a>
+      </div>
     </nav>
+  </header>
 
-</header>      
-
-
-
-  <!-- ================= MAIN ================= -->
+  <!-- MAIN CONTENT -->
   <main>
 
-    <!-- Screen 1- if "mood":"driven" -->
 
-  <section id="driven" class="mood-section">
-    
-    <h1 class="hero-header">Let's move with purpose today.</h1>
- 
-                 <!-- Affirmation cards section -->
-       <section class="affirmation-cards-section" aria-label="affirmation-cards">
-
-        <ul class="affirmation-cards-container">      
-                  <!-- Affirmation-cards -->
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/driven-side-view-smiley-girl-seaside.jpg" alt="">
-                    <p>"You have the power to create progress today."</p>
-                  </article>
-              </li>
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/driven-fresh-green-tree-blue-sky.jpg"alt="">
-                    <p>"Today is a fresh chance, no pressure attached."</p>
-                  </article>
-              </li>
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/driven-beautiful-bicolor-plant-details.jpg"alt="">
-                    <p>"You can protect your energy today."</p>
-                  </article>
-              </li>
-        </ul>     
-  </section>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <h1>Love, but inward.</h1>
 
 
-     <!-- checklist section-->
-    <section class="checklist-section" aria-label="checklist">
-         <!-- checklist-header -->
-        <h2 class="checklist-header">Driven Rituals 
-            <span><i class="ph-bold ph-hand-heart"></i></span>
-        </h2>
-            
-          <!-- checklist-options -->
-    <ul class="checklist">
-        <li><label class="checklist-option">
-         <input type="checkbox"> Identify your top priority 
-         <span><i class="ph-bold ph-arrow-line-up"></i></span> 
-        </label></li>
-        
+      <p>
+        Sonder is a quiet space for self-love, designed to meet you where you are,
+        from morning calm to night reflection.
+      </p>
 
-        <li><label class="checklist-option">
-          <input type="checkbox">Deep work for 25 mins 
-          <span><i class="ph-bold ph-alarm"></i></span> 
-        </label></li>
+    <!-- Screen 3- if "mood":"anxious" -->
 
-        
-        <li><label class="checklist-option">
-            <input type="checkbox">Visualize your success
-            <span><i class="ph-bold ph-calendar-check"></i></span> 
-        </label></li>
-    
-    </ul>
-    </section>
-</section>
-
-
-
-
-
-    <!-- Screen 2- if "mood":"relaxed" -->
-
-  <section id="relaxed" class="mood-section">
-            
-   <h1 class="hero-header">Taking a moment for yourself?</h1>
-                <!-- Affirmation cards container -->
-   <section class="affirmation-cards-section" aria-label="affirmation-cards">
+ <section id="anxious" class="mood-section">
+         
+  <h1 class="hero-header">Let's take it one step at a time</h1>
+  
+  <!-- Affirmation cards container -->
+  <section class="affirmation-cards-section" aria-label="affirmation-cards">
 
           <ul class="affirmation-cards-container">      
-                   <!-- Affirmation cards -->
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/relaxing-beautiful-flowers-seen-humidity-glass.jpg" alt="">
-                    <p>"The open sky reminds you there is space to relax."</p>
-                  </article>
-              </li>
+                    <!-- Affirmation cards -->
+            <li><article class="affirmation-card">
+                  <img class="affirmation-card-image" src="/images/anxiety-beautiful-bicolor-plant-details.jpg" alt="">
+                  <p>"You are safe in this moment."</p>
+                </article>
+            </li>
 
-
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/relaxing-orchid-stones-towel.jpg"alt="">
-                    <p>"Rest is part of being productive."</p>
-                  </article>
-              </li>
-
-
-              <li><article class="affirmation-card">
-                    <img class="affirmation-card-image" src="images/relaxing-weather-effects-collage-concept.jpg"alt="">
-                    <p>"You deserve rest without explanation."</p>
-                  </article>
-              </li>
-        </ul>     
+            <li><article class="affirmation-card">
+                  <img class="affirmation-card-image" src="images/anxiety-relax-written-sand.jpg"alt="">
+                  <p>"Thoughts are just clouds passing by"</p>
+                </article>
+            </li>
+            <li><article class="affirmation-card">
+                  <img class="affirmation-card-image" src="images/anxiety-many-drops-water-falling-leaves.jpg"alt="">
+                  <p>"Breathe. You are in control of this moment."</p>
+                </article>
+            </li>
+      </ul>
+      
   </section>
 
 
           <!-- checklist section-->
     <section class="checklist-section" aria-label="checklist">
-
-      <h2 class="checklist-header">Self-care Checklist 
-         <span><i class="ph-bold ph-hand-heart"></i></span>
+      <h2 class="checklist-header">Stress Relief Rituals 
+          <span><i class="ph-bold ph-hand-heart"></i></span>
       </h2>
 
-         <!-- checklist-options -->
+           <!-- checklist-options -->
     <ul class="checklist">
         <li><label class="checklist-option">
-         <input type="checkbox"> Step outside for fresh air 
-         <span><i class="ph-bold ph-butterfly"></i></span> 
+         <input type="checkbox"> 5-4-3-2-1 grounding exercise
+         <span><i class="ph-bold ph-plant"></i></span> 
         </label></li>
         
 
         <li><label class="checklist-option">
-          <input type="checkbox">Digital detox for 10 mins 
-          <span><i class="ph-bold ph-monitor-play"></i></span> 
+          <input type="checkbox">Feel your feet on the ground
+          <span aria-hidden="true"><i class="ph-bold ph-person-simple"></i></span> 
         </label></li>
 
         
         <li><label class="checklist-option">
-            <input type="checkbox">Enjoy a hydrating herbal tea
-            <span><i class="ph-bold ph-coffee"></i></span> 
+            <input type="checkbox">Exhale longer than you inhale
+            <span aria-hidden="true"><i class="ph-bold ph-head-circuit"></i></span> 
         </label></li>
     
     </ul>
- </section>
+   </section>
 </section>
 
 
+    <!-- FEATURES SECTION -->
+    <section class="features">
+      <h2>How Sonder shows up for you</h2>
 
-    <!-- ===== MOOD: ANXIOUS (feature/anxious-mood) ===== -->
-    <section id="anxious" class="mood-section">
-      <!-- anxious hero -->
-      <!-- anxious affirmation cards -->
-      <!-- anxious checklist -->
+      <div class="feature-list">
+
+        <article class="feature">
+          <h3>Time Capsules</h3>
+          <p>
+            Morning, afternoon, evening, and night, each moment has its own tone,
+            rhythm, and emotional space.
+          </p>
+        </article>
+
+        <article class="feature">
+          <h3>Mood-Led Experience</h3>
+          <p>
+            Whether you feel anxious, driven, tired, or hopeful, your mood shapes
+            the visuals, prompts, and guidance.
+          </p>
+        </article>
+
+        <article class="feature">
+          <h3>Gentle Prompts</h3>
+          <p>
+            Thoughtful reflections and quiet advice, never overwhelming,
+            never demanding.
+          </p>
+        </article>
+
+      </div>
     </section>
 
-
-    <!-- ===== MOOD: TIRED (feature/tired-mood) ===== -->
-    <section id="tired" class="mood-section">
-      <!-- tired hero -->
-      <!-- tired affirmation cards -->
-      <!-- tired checklist -->
+    <!-- OPTIONAL LOVE MONTH / PHILOSOPHY SECTION -->
+    <section class="philosophy">
+      <h2>Love doesn’t always have to be given away</h2>
+      <p>
+        Sonder exists to remind you that showing up for yourself, 
+        softly, honestly, is a form of love too.
+      </p>
     </section>
 
   </main>
 
-
-  <footer class="site-footer">
-    <nav class="footer-navigation">
-      <a href="#">
-          <i class="ph-bold ph-solar-panel"></i>
-          <span>Driven</span>
-      </a>
-
-      <a href="#">
-          <i class="ph-bold ph-atom"></i>
-          <span>Relaxed</span>
-      </a>
-
-      <a href="#">
-          <i class="ph-bold ph-fire"></i>
-          <span>Anxious</span>
-      </a>
-
-      <a href="#">
-          <i class="ph-bold ph-hourglass-simple-low"></i>
-          <span>Tired</span>
-      </a>
-    </nav>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Sonder. All rights reserved.</p>
   </footer>
-
 
 </body>
 </html>
