@@ -22,3 +22,4 @@ See visual direction and token choices in the design documentation: [Design Docu
 Credits
 Design & Implementation: 
 ## Nanji Lakan and Florence Onwuegbuzie
+can be found in our google sheets at https://docs.google.com/spreadsheets/d/1BvVfKBTCzat4DLeq2cD9e1ykY8tQ7AD1aZLOSBxs9CI/edit?usp=sharing
