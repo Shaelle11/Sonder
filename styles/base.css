@@ -1,0 +1,28 @@
+:root{
+    --primary-cream-color: #fdfbf7;
+    --primary-lavender-glow: #f3e8ff;
+    --primary-lavender-dreamy:#EBE4FF;
+    --primary-assets-color: #b2a4ff;
+    --text-color:#211c28;
+    --header-font-family:'Playfair Display';
+    --primary-font-family:'Plus Jakarta Sans';
+    --font-weight-headers: 700;
+    --font-weight-paragraphs: 500;
+    --header-font-size: 4.5rem; 
+    --paragraph-font-size: 1rem;
+    --margin-bottom: 0.5rem;
+    --padding-all-sides: 1rem;
+    --nav-items-font-size:1.5rem;
+
+}
+
+body{
+     margin: 0;
+  font-family: var(--primary-font-family), sans-serif;
+  background:
+    radial-gradient(circle at 20% 30%, var(--primary-lavender-glow) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, var(--primary-lavender-dreamy) 0%, transparent 50%),
+    var(--primary-cream-color);
+  color: var(--text-color);
+}
+
