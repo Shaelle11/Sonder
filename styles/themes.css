@@ -1,0 +1,80 @@
+/* =====================================================
+   TIME OF DAY THEMES
+===================================================== */
+
+/* 🌅 Morning — warm sunrise calm */
+.theme-morning {
+  --primary-cream-color: #FFF7E8;
+  --primary-lavender-glow: #FFE3B3;
+  --primary-lavender-dreamy: #FFD6A0;
+  --primary-assets-color: #FFB347;
+  --text-color: #2B2118;
+}
+
+/* ☀️ Afternoon — energetic golden */
+.theme-afternoon {
+  --primary-cream-color: #FFF1D6;
+  --primary-lavender-glow: #FFD18A;
+  --primary-lavender-dreamy: #FFC46B;
+  --primary-assets-color: #E89B2C;
+  --text-color: #2A1C0F;
+}
+
+/* 🌆 Evening — reflective lavender */
+.theme-evening {
+  --primary-cream-color: #F1ECF8;
+  --primary-lavender-glow: #DCD2F1;
+  --primary-lavender-dreamy: #C7B9EA;
+  --primary-assets-color: #9B8AD6;
+  --text-color: #221B2D;
+}
+
+/* 🌙 Night — deep calm dark */
+.theme-night {
+  --primary-cream-color: #0E1220;
+  --primary-lavender-glow: #1B2238;
+  --primary-lavender-dreamy: #141A2B;
+  --primary-assets-color: #7C8CFF;
+  --text-color: #E7ECFF;
+}
+
+
+/* =====================================================
+   MOOD THEMES
+===================================================== */
+
+/* 🚀 Driven — focused / high clarity */
+.theme-driven {
+  --primary-cream-color: #EEF6FF;
+  --primary-lavender-glow: #CFE4FF;
+  --primary-lavender-dreamy: #B5D5FF;
+  --primary-assets-color: #3B82F6;
+  --text-color: #0F172A;
+}
+
+/* 🌿 Relaxed — grounded calm */
+.theme-relaxed {
+  --primary-cream-color: #F1FAF6;
+  --primary-lavender-glow: #D5F1E4;
+  --primary-lavender-dreamy: #BFE7D5;
+  --primary-assets-color: #4DB6AC;
+  --text-color: #18322B;
+}
+
+/* 🔥 Anxious — gentle stabilizing warmth */
+.theme-anxious {
+  --primary-cream-color: #FFF1F2;
+  --primary-lavender-glow: #FFD6DA;
+  --primary-lavender-dreamy: #FFC2C7;
+  --primary-assets-color: #F87171;
+  --text-color: #3A1A1D;
+}
+
+/* 🌫️ Tired — muted low stimulation */
+.theme-tired {
+  --primary-cream-color: #F4F5F7;
+  --primary-lavender-glow: #E3E6EB;
+  --primary-lavender-dreamy: #D5D9E0;
+  --primary-assets-color: #8A94A6;
+  --text-color: #1E232B;
+}
