@@ -28,7 +28,7 @@ body {
   color: var(--text-color);
 }
 
-body.default-theme {
+body {
   background:
     radial-gradient(circle at 20% 30%, var(--primary-lavender-glow) 0%, transparent 40%),
     radial-gradient(circle at 80% 70%, var(--primary-lavender-dreamy) 0%, transparent 50%),
