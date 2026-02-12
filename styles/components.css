@@ -1,0 +1,97 @@
+nav{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+ 
+}
+
+/* logo */
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-assets-color);
+
+}
+
+/* nav-links */
+
+.nav-center a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.nav-center a:hover {
+  opacity: 0.6;
+}
+
+/* cta */
+
+.cta,
+.hero-cta {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--border-radius-btn);
+  background-color: var(--primary-assets-color);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta:hover,
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(178, 164, 255, 0.4);
+}
+
+/* features cards */
+
+.card {
+  border-radius: var(--border-radius-card);
+  background-color: var(--primary-lavender-glow);
+  transition: transform 0.3s ease;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.feature-icon {
+  background-color: var(--primary-cream-color);
+  padding: 0.5rem;
+  justify-content: left;
+  align-items: center;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 20px;
+}
+
+.card-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-icon svg {
+  transform: scale(1.1);
+}
+/* philosophy section */
+
+.philosophy h2 {
+  margin-bottom: 1rem;
+}
+
+.philosophy p {
+  opacity: 0.8;
+}
+
+
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
