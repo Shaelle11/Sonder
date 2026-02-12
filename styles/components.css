@@ -31,7 +31,6 @@ nav{
 }
 
 /* cta */
-
 .cta,
 .hero-cta {
   display: inline-block;
@@ -51,44 +50,89 @@ nav{
   box-shadow: 0 10px 25px rgba(178, 164, 255, 0.4);
 }
 
-/* features cards */
 
-.card {
+ /* AFFIRMATION CARDS */
+.affirmation-card {
+  background: white;
   border-radius: var(--border-radius-card);
-  background-color: var(--primary-lavender-glow);
-  transition: transform 0.3s ease;
-  justify-content: space-between;
+  padding: 1rem;
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.affirmation-card:hover {
+  transform: translateY(-4px);
 }
-.feature-icon {
-  background-color: var(--primary-cream-color);
-  padding: 0.5rem;
-  justify-content: left;
+
+.affirmation-card-image {
+  width: 100%;
+  border-radius: calc(var(--border-radius-card) / 2);
+  margin-bottom: 0.6rem;
+}
+
+.affirmation-card p {
+  font-size: var(--paragraph-font-size);
+}
+
+
+ /* CHECKLIST ITEMS */
+.checklist-option {
+  display: flex;
   align-items: center;
-  width: 40px; 
-  height: 40px; 
-  border-radius: 20px;
+  background: white;
+  border-radius: var(--border-radius-btn);
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  cursor: pointer;
 }
 
-.card-icon svg {
-  transition: transform 0.3s ease;
+.checklist-option input {
+  margin-right: 0.6rem;
+  accent-color: var(--primary-assets-color);
 }
 
-.card:hover .card-icon svg {
-  transform: scale(1.1);
-}
-/* philosophy section */
 
-.philosophy h2 {
-  margin-bottom: 1rem;
+ /* MOOD / VIBE PILLS */
+.footer-navigation a,
+.vibe-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: white;
+  border-radius: var(--border-radius-btn);
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--text-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
 }
 
-.philosophy p {
-  opacity: 0.8;
+.footer-navigation a:hover,
+.vibe-pill:hover {
+  background: var(--primary-lavender-glow);
 }
+
+/* ================================
+   HERO TYPOGRAPHY
+================================ */
+.hero h1,
+.hero-header {
+  font-family: var(--font-heading);
+  font-size: var(--header-font-size);
+  font-weight: var(--font-weight-headers);
+  margin-bottom: 0.6rem;
+}
+
+.hero p {
+  max-width: 520px;
+  margin-bottom: 1.2rem;
+  font-size: var(--paragraph-font-size);
+}
+
+
 
 
 footer p {
