@@ -33,7 +33,6 @@ nav{
 }
 
 /* cta */
-
 .cta,
 .hero-cta {
   display: inline-block;
@@ -52,6 +51,21 @@ nav{
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(178, 164, 255, 0.4);
 }
+
+.hero h1,
+.hero-header {
+  font-family: var(--font-heading);
+  font-size: var(--header-font-size);
+  font-weight: var(--font-weight-headers);
+  margin-bottom: 0.6rem;
+}
+
+.hero p {
+  max-width: 520px;
+  margin-bottom: 1.2rem;
+  font-size: var(--paragraph-font-size);
+}
+
 
 
 
