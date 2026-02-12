@@ -31,21 +31,6 @@ section {
 
 
 
- /* AFFIRMATION CARDS CONTAINER */
-.affirmation-cards-container {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-}
-
-/* CHECKLIST */
-.checklist {
-  list-style: none;
-  padding: 0;
-}
-
 
 /* footer */
 footer {
