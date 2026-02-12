@@ -1,6 +1,7 @@
 /* Importing all styles */
-@import url('./components.css');
 @import url('./layout.css');
+@import url('./themes.css');
+@import url('./components.css');
 @import url('./index.css');
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Inter:wght@400;500&display=swap');
@@ -28,7 +29,7 @@ body {
   padding-bottom: 60px;
 }
 
-body.default-theme {
+body {
   background:
     radial-gradient(circle at 20% 30%, var(--primary-lavender-glow) 0%, transparent 40%),
     radial-gradient(circle at 80% 70%, var(--primary-lavender-dreamy) 0%, transparent 50%),
