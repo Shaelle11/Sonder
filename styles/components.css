@@ -112,25 +112,33 @@ nav{
 
 
  /* MOOD / VIBE PILLS */
-.footer-navigation a,
-.vibe-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  background: white;
-  border-radius: var(--border-radius-btn);
-  padding: 0.45rem 0.9rem;
-  font-size: 0.8rem;
-  text-decoration: none;
+.footer-navigation a {
+  background: transparent;     
+  border-radius: 0;            
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--text-color);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: background 0.2s ease;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
+/* icon styling */
+.footer-navigation a i,
+.footer-navigation a svg {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
 
-.footer-navigation a:hover,
-.vibe-pill:hover {
-  background: var(--primary-lavender-glow);
+/* hover effect */
+.footer-navigation a:hover {
+  color: var(--primary-lavender);
+}
+
+.footer-navigation a:hover i,
+.footer-navigation a:hover svg {
+  transform: translateY(-2px);
+  color: var(--primary-lavender);
 }
 
 
