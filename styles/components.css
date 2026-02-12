@@ -37,7 +37,7 @@ nav{
   display: inline-block;
   text-decoration: none;
   padding: 0.9rem 1.8rem;
-  border-radius: 40px;
+  border-radius: var(--border-radius-btn);
   background-color: var(--primary-assets-color);
   color: white;
   font-size: 0.95rem;
@@ -53,18 +53,33 @@ nav{
 
 /* features cards */
 
-.feature {
-    display: flex;
-  padding: 1rem;
-  border-radius: 20px;
+.card {
+  border-radius: var(--border-radius-card);
   background-color: var(--primary-lavender-glow);
+  transition: transform 0.3s ease;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.feature-icon {
+  background-color: var(--primary-cream-color);
+  padding: 0.5rem;
+  justify-content: left;
+  align-items: center;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 20px;
+}
+
+.card-icon svg {
   transition: transform 0.3s ease;
 }
 
-.feature:hover {
-  transform: translateY(-5px);
+.card:hover .card-icon svg {
+  transform: scale(1.1);
 }
-
 /* philosophy section */
 
 .philosophy h2 {
@@ -75,9 +90,6 @@ nav{
   opacity: 0.8;
 }
 
-footer{
-
-}
 
 footer p {
   font-size: 0.85rem;
