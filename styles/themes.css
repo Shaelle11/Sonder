@@ -67,6 +67,17 @@
   color: #fdfbf7;
 }
 
+/* Affirmation cards in night theme should match other time-capsule pages
+   — light background with readable dark text */
+.theme-night .affirmation-card {
+  background: #ffffff;
+  color: #211c28;
+}
+
+.theme-night .affirmation-card p {
+  color: #211c28;
+}
+
 
 
  /* MOOD THEMES */
