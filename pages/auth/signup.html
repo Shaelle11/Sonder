@@ -19,24 +19,22 @@
         <h1>Create an account</h1>
 
         <form class="auth-form" action="#" method="post" aria-label="Sign up">
-            <div class="form-row">
+            <fieldset class="form-row">
                 <label for="su-name">Full name</label>
                 <input id="su-name" name="name" type="text" required />
-            </div>
+            </fieldset>
 
-            <div class="form-row">
+            <fieldset class="form-row">
                 <label for="su-email">Email</label>
                 <input id="su-email" name="email" type="email" required />
-            </div>
+            </fieldset>
 
-            <div class="form-row">
+            <fieldset class="form-row">
                 <label for="su-password">Password</label>
                 <input id="su-password" name="password" type="password" required minlength="8" />
-            </div>
-
-            <div class="form-row">
+            </fieldset>
                 <button class="cta" type="submit">Create account</button>
-            </div>
+        
 
             <p class="muted">Already have an account? <a href="signin.html">Sign in</a></p>
         </form>

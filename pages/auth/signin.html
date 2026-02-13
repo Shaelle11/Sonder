@@ -8,30 +8,25 @@
         <link rel="stylesheet" href="../../styles/auth.css" />
 </head>
 <body>
-    <main class="auth-container">
-         <header >
-     
-
+    <header>
         <a href="../../index.html" class="logo">Sonder</a>
-
-
     </header>
+    <main class="auth-container">
         <h1>Sign in</h1>
 
         <form class="auth-form" action="#" method="post" aria-label="Sign in">
-            <div class="form-row">
+            <fieldset class="form-row">
                 <label for="si-email">Email</label>
                 <input id="si-email" name="email" type="email" required />
-            </div>
+            </fieldset>
 
-            <div class="form-row">
+            <fieldset class="form-row">
                 <label for="si-password">Password</label>
                 <input id="si-password" name="password" type="password" required />
-            </div>
+            </fieldset>
 
-            <div class="form-row">
                 <button class="cta" type="submit">Sign in</button>
-            </div>
+        
 
             <p class="muted">New here? <a href="signup.html">Create an account</a></p>
         </form>

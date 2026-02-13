@@ -1,4 +1,4 @@
-/* About page specific styles moved from components.css */
+/* About page */
 
 .about-how ul {
   list-style: none;
@@ -9,8 +9,6 @@
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 12px;
-  border: 1px shadow var(--warm-beige-tone);
-  background-color: var(--primary-cream-color);
 }
 
 .about-how li:hover {
@@ -20,6 +18,3 @@
   box-shadow: 0 10px 25px var(--warm-beige-tone);
   color: var(--primary-cream-color);
 }
-
-/* Reduce extra vertical space below main on about page */
-main { padding-bottom: 1rem; }

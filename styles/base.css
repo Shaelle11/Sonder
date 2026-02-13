@@ -3,6 +3,7 @@
 @import url('./themes.css');
 @import url('./components.css');
 @import url('./index.css');
+@import url('./responsive.css');
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Inter:wght@400;500&display=swap');
 
@@ -13,6 +14,8 @@
     --primary-assets-color: #E7A1DA;
     --text-color:#211c28;
     --font-heading: 'Fraunces', serif;
+    --warm-beige-tone: #ddcac2;
+    --beige-tone-dark:#A18276;
     --font-heading-beige: #A18276;
     --font-body: 'Inter', sans-serif;
     --font-weight-headers: 900;
@@ -27,7 +30,6 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--text-color);
-  padding-bottom: 60px;
 }
 
 body {
@@ -41,6 +43,8 @@ h1, h2, h3 {
   font-family: var(--font-heading);
   line-height: 1.2;
   color: var(--font-heading-beige);
+  font-size: var(--header-font-size);
+  font-weight: var(--font-weight-headers);
 }
 
 h1 {

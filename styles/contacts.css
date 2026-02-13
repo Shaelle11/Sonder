@@ -1,5 +1,8 @@
 /* Contacts page styles*/
-
+*{
+  border: none;
+  outline: none;
+}
 .contact-form {
   max-width: 700px;
   margin: 0rem auto;
@@ -17,8 +20,10 @@
 }
 
 .contact-form label {
+  margin: 1rem 0rem 0.5rem 0rem;
+  text-align: left;
   font-weight: 600;
-  color: var(--heading-text-color);
+  color: var(--font-heading-beige);
 }
 
 .contact-form input,
@@ -30,6 +35,7 @@
   color: var(--text-color);
   background: white;
   box-shadow: inset 0 -1px 0 rgba(33,28,40,0.04);
+  border: 2px solid var(--warm-beige-tone);
 }
 
 .contact-form textarea { min-height: 140px; }
@@ -55,8 +61,8 @@
 /* Input focus styling for accessibility */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none;
   box-shadow: 0 0 0 3px rgba(232,158,184,0.12);
+    border: 2px solid var(--font-heading-beige);
 }
 
 /* Utility for accessibility (visually-hidden) */

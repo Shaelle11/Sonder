@@ -1,6 +1,4 @@
-/* Time capsule page styles: match landing nav, fixed small square images, phone-like bottom nav */
 
-/* Top nav styled like landing */
 .header-navigation {
   display: flex;
   align-items: center;
@@ -8,7 +6,6 @@
   gap: 1rem;
 }
 
-/* Make the logo stand out like landing nav */
 .header-navigation > a {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -43,8 +40,9 @@
 
 /* fixed small square images */
 .affirmation-card-image {
-  width: 216px;
-  height: 216px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 8px;
 }

@@ -1,16 +1,15 @@
 /* global layout */
 
 header {
-  padding: 1.5rem 4rem;
+  padding: 1rem 4rem;
   display: grid;
 }
 
 main {
-  padding: 4rem 4rem;
-}
-
-section {
-  margin-bottom: 1rem;
+  padding: 1rem 4rem;
+    text-align: center;
+  max-width: 900px;
+margin: auto;
 }
 
 /* navigation */
