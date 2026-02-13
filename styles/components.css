@@ -46,7 +46,7 @@ nav{
   transform-origin: bottom left; /* Slides in from left */
 }
 
-/* Nav links should match the page hero color */
+
 .nav-center a {
   color: var(--hero-color, var(--primary-assets-color)) !important;
 }
@@ -63,8 +63,8 @@ summary.mobile-menu-summary {
 
 details.mobile-menu { position: relative; }
   body.time-page .affirmation-card {
-    flex: 0 0 320px;
-    min-width: 280px;
+    flex: 0 0 240px;
+    min-width: 200px;
   }
 
 /* mobile behaviour */
@@ -98,14 +98,12 @@ details.mobile-menu { position: relative; }
 }
 
 
-/* Use a page-level hero color variable so nav links can match the H1 color */
 .hero-header,
 .checklist-section h2 {
   color: var(--hero-color, var(--primary-assets-color));
 }
 
-/* Time capsule pages should use readable text color for headings */
-/* Set the hero color variable for time pages (except night) */
+
 body.time-page:not(.theme-night) {
   --hero-color: var(--text-color);
 }
@@ -149,7 +147,7 @@ body.time-page .affirmation-card-image {
 
 
 /* AFFIRMATION CARDS */
-.affirmation-card {
+  .affirmation-card {
   background: var(--primary-cream-color);
   border-radius: var(--border-radius-card);
   padding: 1rem;
@@ -159,8 +157,8 @@ body.time-page .affirmation-card-image {
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
-  flex: 0 0 320px;
-  width: 320px;
+  flex: 0 0 240px;
+  width: 240px;
   box-sizing: border-box;
   height: 340px;
 }
@@ -169,19 +167,19 @@ body.time-page .affirmation-card-image {
   transform: translateY(-4px);
 }
 
+.affirmation-card {
+  width: 240px;
+  flex: 0 0 240px;
+  align-items: center;
+}
 .affirmation-card img,
 .affirmation-card-image {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
   flex: none;
 }
-.feature-icon {
-  background-color: var(--primary-cream-color);
-  padding: 0.5rem;
-  justify-content: left;
-  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 20px;
