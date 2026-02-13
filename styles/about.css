@@ -20,3 +20,6 @@
   box-shadow: 0 10px 25px var(--warm-beige-tone);
   color: var(--primary-cream-color);
 }
+
+/* Reduce extra vertical space below main on about page */
+main { padding-bottom: 1rem; }

@@ -76,6 +76,9 @@ nav{
   min-width: 220px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .affirmation-card:hover {
@@ -83,13 +86,47 @@ nav{
 }
 
 .affirmation-card-image {
-  width: 100%;
-  border-radius: calc(var(--border-radius-card) / 2);
-  margin-bottom: 0.6rem;
+  width: 216px;
+  height: 216px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 216px;
 }
 
 .affirmation-card p {
   font-size: var(--paragraph-font-size);
+}
+
+/* Shared feature card styles (consolidated from index.css) */
+.card {
+  border-radius: var(--border-radius-card);
+  transition: transform 0.3s ease;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: left;
+  padding: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-5px) ease 0.5s;
+}
+.feature-icon {
+  background-color: var(--primary-cream-color);
+  padding: 0.5rem;
+  justify-content: left;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.card-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-icon svg {
+  transform: scale(1.1);
 }
 
 

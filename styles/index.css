@@ -1,33 +1,3 @@
-/* #COMPONENTS */
-/* features cards */
-
-.card {
-  border-radius: var(--border-radius-card);
-  background-color: var(--primary-lavender-glow);
-  transition: transform 0.3s ease;
-  justify-content: space-between;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-.feature-icon {
-  background-color: var(--primary-cream-color);
-  padding: 0.5rem;
-  justify-content: left;
-  align-items: center;
-  width: 40px; 
-  height: 40px; 
-  border-radius: 20px;
-}
-
-.card-icon svg {
-  transition: transform 0.3s ease;
-}
-
-.card:hover .card-icon svg {
-  transform: scale(1.1);
-}
 /* philosophy section */
 
 .philosophy h2 {
@@ -70,11 +40,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
-.card {
-  max-width: 700px;
-  margin: 2rem auto;
-  text-align: left;
-  padding: 2rem;
+.card { max-width: 700px; margin: 2rem auto; text-align: left; padding: 2rem; 
 }
 
 /* philosophy */
