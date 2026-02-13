@@ -11,27 +11,43 @@
   --text-color: #2B2118;
 }
 
-/* dark */
-/* NIGHT THEME TEXT FIX */
-.theme-night {
-  --primary-cream-color: #0E1220;
-  --primary-lavender-glow: #1B2238;
-  --primary-lavender-dreamy: #141A2B;
-  --primary-assets-color: #7C8CFF;
-  --text-color: #d4cfcf; /* make text readable */
+.theme-afternoon {
+  --primary-cream-color: #FFF1D6;
+  --primary-lavender-glow: #FFD18A;
+  --primary-lavender-dreamy: #FFC46B;
+  --primary-assets-color: #E89B2C;
+  --text-color: #2A1C0F;
 }
 
-.theme-night .checklist-option,
-.theme-night .footer-navigation a {
-  color: var(--primary-lavender-dreamy);
+ /* lavender */
+.theme-evening {
+  --primary-cream-color: #F1ECF8;
+  --primary-lavender-glow: #DCD2F1;
+  --primary-lavender-dreamy: #C7B9EA;
+  --primary-assets-color: #9B8AD6;
+  --text-color: #221B2D;
 }
+
+
 /* NIGHT THEME TEXT FIX */
 .theme-night {
-  --primary-cream-color: #0E1220;
-  --primary-lavender-glow: #1B2238;
-  --primary-lavender-dreamy: #141A2B;
+  /* reverted to dark night palette */
+  --primary-cream-color: #0f1724;
+  --primary-lavender-glow: #0b1226;
+  --primary-lavender-dreamy: #101424;
   --primary-assets-color: #7C8CFF;
-  --text-color: #0E1220;
+  --text-color: #f7f5f2; /* light text for night */
+}
+
+/* Keep only the night header cream-colored */
+.theme-night .hero-header,
+.theme-night .checklist-header {
+  color: #fdfbf7;
+}
+
+/* Keep paragraph text in night theme at the previous readable color */
+.theme-night p {
+  color: #211c28;
 }
 
 
