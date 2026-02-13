@@ -57,6 +57,10 @@ summary.mobile-menu-summary {
 }
 
 details.mobile-menu { position: relative; }
+  body.time-page .affirmation-card {
+    flex: 0 1 220px;
+    min-width: 160px;
+  }
 
 /* mobile behaviour */
 @media (max-width: 768px) {
