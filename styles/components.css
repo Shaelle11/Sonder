@@ -169,13 +169,13 @@ body.time-page .checklist-header {
 
 /* hover effect */
 .footer-navigation a:hover {
-  color: var(--primary-lavender);
+  color: var(--primary-cream-color);
 }
 
 .footer-navigation a:hover i,
 .footer-navigation a:hover svg {
   transform: translateY(-2px);
-  color: var(--primary-lavender);
+  color: var(--primary-cream-color);
 }
 
 

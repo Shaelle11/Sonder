@@ -60,6 +60,13 @@
   color: #211c28;
 }
 
+/* Make footer nav hover warm-cream in night theme */
+.theme-night .footer-navigation a:hover,
+.theme-night .footer-navigation a:hover i,
+.theme-night .footer-navigation a:hover svg {
+  color: #fdfbf7;
+}
+
 
 
  /* MOOD THEMES */
