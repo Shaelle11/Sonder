@@ -50,6 +50,11 @@ nav{
 .nav-center a {
   color: var(--hero-color, var(--primary-assets-color)) !important;
 }
+
+/* Time capsule nav links should always use the base --text-color token */
+body.time-page .nav-center a {
+  color: var(--text-color) !important;
+}
 /* MOBILE: details/summary (CSS-only hamburger) */
 summary.mobile-menu-summary {
   list-style: none;
