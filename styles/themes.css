@@ -50,6 +50,16 @@
   color: #211c28;
 }
 
+/* Keep footer navigation and checklist item text readable (dark) in night theme */
+.theme-night .footer-navigation a,
+.theme-night .footer-navigation a i,
+.theme-night .footer-navigation a svg,
+.theme-night .checklist,
+.theme-night .checklist-option,
+.theme-night .checklist-option label {
+  color: #211c28;
+}
+
 
 
  /* MOOD THEMES */
