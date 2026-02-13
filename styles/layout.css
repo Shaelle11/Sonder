@@ -40,7 +40,7 @@ margin: auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  overflow-x: auto;
+  overflow-x: hidden; /* prevent horizontal scroll; allow children to shrink */
 }
 
 .affirmation-cards-section {
