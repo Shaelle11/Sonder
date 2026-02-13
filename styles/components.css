@@ -58,8 +58,8 @@ summary.mobile-menu-summary {
 
 details.mobile-menu { position: relative; }
   body.time-page .affirmation-card {
-    flex: 0 1 220px;
-    min-width: 160px;
+    flex: 0 0 240px;
+    min-width: 200px;
   }
 
 /* mobile behaviour */
@@ -136,7 +136,7 @@ body.time-page .affirmation-card-image {
 
 /* AFFIRMATION CARDS */
 .affirmation-card {
-  background: white;
+  background: var(--primary-cream-color);
   border-radius: var(--border-radius-card);
   padding: 1rem;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -145,10 +145,10 @@ body.time-page .affirmation-card-image {
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
-  flex: 0 0 200px;
-  width: 200px;
+  flex: 0 0 240px;
+  width: 240px;
   box-sizing: border-box;
-  height: 380px; /* fixed card height so all cards match */
+  height: 420px;
 }
 
 .affirmation-card:hover {
@@ -159,7 +159,6 @@ body.time-page .affirmation-card-image {
 .affirmation-card-image {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 8px;
   flex: none;
@@ -240,15 +239,15 @@ footer p {
 
 /* Enforce uniform small card size and image dimensions (override earlier rules) */
 .affirmation-card {
-  width: 160px;
-  flex: 0 0 160px;
+  width: 240px;
+  flex: 0 0 240px;
   align-items: center;
 }
 
 .affirmation-card img,
 .affirmation-card-image {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
   border-radius: 8px;
   flex: none;
