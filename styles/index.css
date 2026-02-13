@@ -1,0 +1,56 @@
+/* philosophy section */
+
+.philosophy h2 {
+  margin-bottom: 1rem;
+}
+
+.philosophy p {
+  opacity: 0.8;
+}
+
+
+/* #LAYOUT */
+
+/* hero */
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  margin: auto 2.5rem;
+}
+
+/* features */
+
+.feature-section {
+  display: grid;
+  text-align: center;
+}
+
+.feature-section > h2 {
+  margin-bottom: 3rem;
+}
+
+.features{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.card { max-width: 700px; 
+  margin: 2rem auto; 
+  text-align: left;
+   padding: 2rem; 
+   border: 2px solid var(--beige-tone-dark);
+}
+
+/* philosophy */
+
+.philosophy {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}

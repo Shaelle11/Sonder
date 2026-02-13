@@ -1,0 +1,266 @@
+
+
+nav{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+ 
+}
+
+/* logo */
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-assets-color);
+
+}
+
+/* nav-links */
+
+.nav-center a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--font-heading-beige);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 5px;
+
+}
+.nav-center a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0); /* Starts hidden */
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid var(--primary-assets-color);
+  transform-origin: bottom right; /* Starts animation from right */
+  transition: transform 0.3s ease-out; /* Smooth transition */
+}
+
+.nav-center a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left; /* Slides in from left */
+}
+/* MOBILE: details/summary (CSS-only hamburger) */
+summary.mobile-menu-summary {
+  list-style: none;
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+details.mobile-menu { position: relative; }
+  body.time-page .affirmation-card {
+    flex: 0 1 220px;
+    min-width: 160px;
+  }
+
+/* mobile behaviour */
+@media (max-width: 768px) {
+  .nav-center { display: none; }
+  summary.mobile-menu-summary { display: inline-flex; align-items: center; gap: .5rem; }
+  details.mobile-menu[open] .nav-center { display: flex; flex-direction: column; gap: .75rem; }
+  details.mobile-menu[open] .nav-center a { color: var(--text-color); font-weight: 600; }
+  details.mobile-menu[open] .cta { display: inline-block; margin-top: .5rem; }
+  details.mobile-menu[open] { position: absolute; left: 0; right: 0; top: 60px; background: var(--primary-cream-color); padding: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); z-index: 120; }
+}
+/* cta */
+.cta,
+.hero-cta {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--border-radius-btn);
+  background-color: var(--primary-assets-color);
+  color: var(--primary-cream-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+}
+
+.cta:hover,
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(178, 164, 255, 0.4);
+}
+
+
+.hero-header,
+.checklist-section h2
+{
+  color: var(--primary-assets-color);
+}
+
+/* Time capsule pages should use readable text color for headings */
+/* Time capsule pages: headings use --text-color except when theme-night is active */
+body.time-page:not(.theme-night) .hero-header,
+body.time-page:not(.theme-night) .checklist-header {
+  color: var(--text-color) !important;
+}
+
+.hero p {
+  max-width: 520px;
+  font-size: var(--paragraph-font-size);
+}
+
+/* Time-capsule specific: center cards and use smaller images */
+body.time-page .affirmation-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+body.time-page .affirmation-card {
+  flex: 0 1 220px;
+  min-width: 160px;
+}
+
+body.time-page .affirmation-card img,
+body.time-page .affirmation-card-image {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+
+/* AFFIRMATION CARDS */
+.affirmation-card {
+  background: white;
+  border-radius: var(--border-radius-card);
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  flex: 0 0 200px;
+  width: 200px;
+  box-sizing: border-box;
+  height: 380px; /* fixed card height so all cards match */
+}
+
+.affirmation-card:hover {
+  transform: translateY(-4px);
+}
+
+.affirmation-card img,
+.affirmation-card-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: none;
+}
+.feature-icon {
+  background-color: var(--primary-cream-color);
+  padding: 0.5rem;
+  justify-content: left;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.card-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-icon svg {
+  transform: scale(1.1);
+}
+
+
+ /* CHECKLIST ITEMS */
+.checklist-option {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: var(--border-radius-btn);
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+.checklist-option input {
+  margin-right: 0.6rem;
+  accent-color: var(--primary-assets-color);
+}
+
+
+ /* MOOD / VIBE PILLS */
+.footer-navigation a {
+  background: transparent;     
+  border-radius: 0;            
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* icon styling */
+.footer-navigation a i,
+.footer-navigation a svg {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* hover effect */
+.footer-navigation a:hover {
+  color: var(--font-heading-beige);
+}
+
+.footer-navigation a:hover i,
+.footer-navigation a:hover svg {
+  transform: translateY(-2px);
+  color: var(--font-heading-beige);
+}
+
+
+
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Enforce uniform small card size and image dimensions (override earlier rules) */
+.affirmation-card {
+  width: 160px;
+  flex: 0 0 160px;
+  align-items: center;
+}
+
+.affirmation-card img,
+.affirmation-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: none;
+}
+
+/* make paragraph content fill remaining card space and center text */
+.affirmation-card p {
+  margin: 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 0.25rem;
+}

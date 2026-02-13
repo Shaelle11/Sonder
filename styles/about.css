@@ -1,0 +1,20 @@
+/* About page */
+
+.about-how ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-how li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.about-how li:hover {
+  background-color: var(--primary-assets-color);
+  transition: background-color;
+  transform: translateY(-3px) 0.3s ease;
+  box-shadow: 0 10px 25px var(--warm-beige-tone);
+  color: var(--primary-cream-color);
+}

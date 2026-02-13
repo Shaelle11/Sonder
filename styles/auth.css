@@ -1,0 +1,102 @@
+/* Auth pages styles — uses root tokens */
+*{
+  border: none;
+  outline: none;
+  padding: 0;
+}
+.auth-page, .auth-container { font-family: var(--font-body); 
+}
+
+.auth-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--primary-cream-color);
+  border-radius: calc(var(--border-radius-card) / 2);
+  text-align: left;
+}
+
+
+/* smaller heading for auth entry */
+
+.auth-container h1 { font-size: 1.6rem; }
+
+
+
+.auth-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.auth-form label {
+  margin: 1rem 0 0.5rem 0;
+  text-align: left;
+  font-weight: 600;
+  color: var(--font-heading-beige);
+}
+ 
+.auth-form input, .auth-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background: white;
+  box-shadow: inset 0 -1px 0 rgba(33,28,40,0.04);
+  border: 2px solid var(--warm-beige-tone);
+}
+.auth-form input,
+.auth-form .muted {
+  color: rgba(33,28,40,0.6);
+  font-size: 0.95rem;
+}
+.auth-form .muted a { 
+  color: var(--primary-assets-color); 
+  text-decoration: none; }
+
+
+.auth-actions { 
+  display:flex; 
+  flex-direction:column;
+   gap:0.9rem;
+    align-items:center; 
+  }
+.auth-actions .auth-cta { 
+  width: 120px; 
+  display:inline-block;
+   text-align:center;
+   }
+
+
+.guest-link {
+   text-decoration: none;
+    font-size: 0.95rem; 
+    color: var(--text-color); 
+    font-weight:500; opacity:1;
+     transition: opacity 0.2s ease; 
+     display:block; text-align:center; 
+     padding-top:0.35rem; 
+    }
+.guest-link:hover { 
+  opacity:0.6; 
+}
+
+.auth-form .cta {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border-radius: var(--border-radius-btn);
+  background-color: var(--primary-assets-color);
+  color: var(--primary-cream-color);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Input focus styling to match contact form */
+.auth-form input:focus,
+.auth-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(232,158,184,0.12);
+  border: 2px solid var(--font-heading-beige);
+}

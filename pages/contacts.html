@@ -4,56 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Sonder</title>
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/contacts.css">
 </head>
 
 <body>
-
   <header>
-    <nav>
-      <a href="../index.html">Sonder</a>
-      <div class="nav-links">
+    <!-- NAVIGATION -->
+    <section class="top-header">
+      <nav>
+        <a href="../index.html" class="logo">Sonder</a>
+      <section class="nav-center">
         <a href="../index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./contacts.html" aria-current="page">Contact</a>
-      </div>
-      <a href="../pages/timeCapsule/morning.html">Step into your mood</a>
+        <a href="about.html">About</a>
+        <a href="contacts.html" aria-current="page">Contact</a>
+      </section>
     </nav>
-  </header>
-
-  <main>
-
+        <a href="./auth/entry.html" class="cta">
+          Enter Your Space
+        </a>
+    </section>
     <!-- PAGE INTRO -->
-    <section class="page-intro">
+     <section class="hero">
       <h1>Get in touch</h1>
       <p>
         Thoughts, feedback, or quiet reflections?
         We’re listening.
       </p>
-    </section>
+      </section>
+</header>
 
+
+  <main>
     <!-- CONTACT FORM -->
-    <section class="contact-form">
-      <form action="#" method="post">
+      <form class="contact-form" action="#" method="post" aria-label="Contact form">
+        <fieldset>
 
-        <div>
-          <label for="name">Your name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
+          <fieldset class="form-row">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required />
+          </fieldset>
 
-        <div>
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email" required />
-        </div>
+          <fieldset class="form-row">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required />
+          </fieldset>
 
-        <div>
-          <label for="message">Your message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
+          <fieldset class="form-row">
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </fieldset>
 
-        <button type="submit">Send message</button>
+          <fieldset class="form-row">
+            <button class="cta" type="submit">Send message</button>
+          </fieldset>
 
+        </fieldset>
       </form>
-    </section>
 
     <!-- OPTIONAL SOFT NOTE -->
     <section class="contact-note">

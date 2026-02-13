@@ -1,0 +1,65 @@
+/* Importing all styles */
+@import url('./layout.css');
+@import url('./themes.css');
+@import url('./components.css');
+@import url('./index.css');
+@import url('./responsive.css');
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Inter:wght@400;500&display=swap');
+
+:root{
+    --primary-cream-color: #fdfbf7;
+    --primary-lavender-glow: #f3e8ff;
+    --primary-lavender-dreamy:#EBE4FF;
+    --primary-assets-color: #E7A1DA;
+    --text-color:#211c28;
+    --font-heading: 'Fraunces', serif;
+    --warm-beige-tone: #ddcac2;
+    --beige-tone-dark:#A18276;
+    --font-heading-beige: #A18276;
+    --font-body: 'Inter', sans-serif;
+    --font-weight-headers: 900;
+    --font-weight-paragraphs: 500;
+    --header-font-size: 4rem; 
+    --paragraph-font-size: 1rem;
+    --border-radius-card: 20px;
+    --border-radius-btn: 40px;
+}
+
+body{
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-color);
+}
+
+body{
+  background:
+    radial-gradient(circle at 20% 30%, var(--primary-lavender-dreamy) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, var(--primary-assets-color) 0%, transparent 50%),
+    var(--primary-cream-color);
+}
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--font-heading-beige);
+  font-size: var(--header-font-size);
+  font-weight: var(--font-weight-headers);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+/* paragraph */
+p  { font-size: 1rem;
+line-height: 1.7;
+ }
+
