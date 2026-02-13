@@ -1,15 +1,12 @@
-/* Contacts page styles*/
-*{
-  border: none;
-  outline: none;
-}
+/* Contacts page styles — uses root design tokens */
+
 .contact-form {
   max-width: 700px;
-  margin: 0rem auto;
-  background: var(--primary-cream-color);
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.6);
   padding: 1.5rem;
   border-radius: calc(var(--border-radius-card) / 2);
-
+  box-shadow: 0 6px 18px rgba(33,28,40,0.06);
 }
 
 .contact-form .form-row {
@@ -30,12 +27,11 @@
 .contact-form textarea {
   padding: 0.75rem 1rem;
   border-radius: 12px;
+  border: 1px solid var(--primary-lavender-dreamy);
   font-size: 1rem;
   font-family: var(--font-body);
-  color: var(--text-color);
+  color: var(--waerm-beige-tone);
   background: white;
-  box-shadow: inset 0 -1px 0 rgba(33,28,40,0.04);
-  border: 2px solid var(--warm-beige-tone);
 }
 
 .contact-form textarea { min-height: 140px; }
@@ -55,14 +51,6 @@
   max-width: 700px;
   margin: 1rem auto 3rem;
   color: rgba(33,28,40,0.7);
-}
-
-
-/* Input focus styling for accessibility */
-.contact-form input:focus,
-.contact-form textarea:focus {
-  box-shadow: 0 0 0 3px rgba(232,158,184,0.12);
-    border: 2px solid var(--font-heading-beige);
 }
 
 /* Utility for accessibility (visually-hidden) */
