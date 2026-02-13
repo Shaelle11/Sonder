@@ -10,9 +10,10 @@
     --primary-cream-color: #fdfbf7;
     --primary-lavender-glow: #f3e8ff;
     --primary-lavender-dreamy:#EBE4FF;
-    --primary-assets-color: #b2a4ff;
+    --primary-assets-color: #E7A1DA;
     --text-color:#211c28;
     --font-heading: 'Fraunces', serif;
+    --font-heading-beige: #A18276;
     --font-body: 'Inter', sans-serif;
     --font-weight-headers: 900;
     --font-weight-paragraphs: 500;
@@ -31,14 +32,15 @@ body {
 
 body {
   background:
-    radial-gradient(circle at 20% 30%, var(--primary-lavender-glow) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, var(--primary-lavender-dreamy) 0%, transparent 50%),
+    radial-gradient(circle at 20% 30%, var(--primary-lavender-dreamy) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, var(--primary-assets-color) 0%, transparent 50%),
     var(--primary-cream-color);
 }
 /* Headings */
 h1, h2, h3 {
   font-family: var(--font-heading);
   line-height: 1.2;
+  color: var(--font-heading-beige);
 }
 
 h1 {

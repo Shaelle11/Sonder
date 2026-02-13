@@ -1,0 +1,46 @@
+/* Auth pages styles — uses root tokens */
+
+.auth-page, .auth-container { font-family: var(--font-body); }
+
+.auth-container {
+  max-width: 420px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(33,28,40,0.06);
+  text-align: left;
+}
+
+.auth-container h1 {
+  font-family: var(--font-heading);
+  margin: 0 0 1rem 0;
+  color: var(--heading-text-color);
+}
+
+/* smaller heading for auth entry */
+.auth-container h1 { font-size: 1.6rem; }
+
+.auth-form .form-row { display:block; margin-bottom: 1rem; }
+.auth-form label { display:block; margin-bottom: 0.4rem; font-weight:600; color:var(--heading-text-color); }
+.auth-form input, .auth-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--primary-lavender-dreamy);
+  font-size: 1rem;
+}
+
+.auth-form .muted { color: rgba(33,28,40,0.6); font-size:0.95rem; margin-top: 1rem; }
+.auth-form .muted a { color: var(--primary-assets-color); text-decoration: none; }
+
+/* Entry page actions: center buttons and reduce width */
+.auth-actions { display:flex; flex-direction:column; gap:0.9rem; align-items:center; }
+.auth-actions .auth-cta { width: 220px; display:inline-block; text-align:center; }
+
+/* Guest link styled similar to nav links */
+.guest-link { text-decoration: none; font-size: 0.95rem; color: var(--text-color); font-weight:500; opacity:1; transition: opacity 0.2s ease; display:block; text-align:center; padding-top:0.35rem; }
+.guest-link:hover { opacity:0.6; }
+
+/* make CTA look consistent */
+.auth-form .cta { display:inline-block; padding:0.85rem 1.4rem; border-radius:var(--border-radius-btn); background:var(--primary-assets-color); color:white; border:none; cursor:pointer; }
