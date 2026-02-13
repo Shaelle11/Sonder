@@ -46,16 +46,9 @@ nav{
   transform-origin: bottom left; /* Slides in from left */
 }
 
-/* Nav link colors should match page H1 headings:
-   - Time-capsule pages (except theme-night) use --text-color
-   - Mood pages use the theme's --primary-assets-color (hero header)
-*/
-body.time-page:not(.theme-night) .nav-center a {
-  color: var(--text-color) !important;
-}
-
-body:not(.time-page) .nav-center a {
-  color: var(--primary-assets-color) !important;
+/* Nav links should match the page hero color */
+.nav-center a {
+  color: var(--hero-color, var(--primary-assets-color)) !important;
 }
 /* MOBILE: details/summary (CSS-only hamburger) */
 summary.mobile-menu-summary {
@@ -105,17 +98,16 @@ details.mobile-menu { position: relative; }
 }
 
 
+/* Use a page-level hero color variable so nav links can match the H1 color */
 .hero-header,
-.checklist-section h2
-{
-  color: var(--primary-assets-color);
+.checklist-section h2 {
+  color: var(--hero-color, var(--primary-assets-color));
 }
 
 /* Time capsule pages should use readable text color for headings */
-/* Time capsule pages: headings use --text-color except when theme-night is active */
-body.time-page:not(.theme-night) .hero-header,
-body.time-page:not(.theme-night) .checklist-header {
-  color: var(--text-color) !important;
+/* Set the hero color variable for time pages (except night) */
+body.time-page:not(.theme-night) {
+  --hero-color: var(--text-color);
 }
 
 /* Also ensure specific time themes (morning, afternoon, evening) use --text-color */
