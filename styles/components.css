@@ -96,14 +96,35 @@ details.mobile-menu { position: relative; }
 }
 
 /* Time capsule pages should use readable text color for headings */
-body.time-page .hero-header,
-body.time-page .checklist-header {
+/* Time capsule pages: headings use --text-color except when theme-night is active */
+body.time-page:not(.theme-night) .hero-header,
+body.time-page:not(.theme-night) .checklist-header {
   color: var(--text-color) !important;
 }
 
 .hero p {
   max-width: 520px;
   font-size: var(--paragraph-font-size);
+}
+
+/* Time-capsule specific: center cards and use smaller images */
+body.time-page .affirmation-cards-container {
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+body.time-page .affirmation-card {
+  flex: 0 1 220px;
+  min-width: 160px;
+}
+
+body.time-page .affirmation-card img,
+body.time-page .affirmation-card-image {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
 }
 
 
