@@ -45,6 +45,28 @@ nav{
   transform: scaleX(1);
   transform-origin: bottom left; /* Slides in from left */
 }
+/* MOBILE: details/summary (CSS-only hamburger) */
+summary.mobile-menu-summary {
+  list-style: none;
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+details.mobile-menu { position: relative; }
+
+/* mobile behaviour */
+@media (max-width: 768px) {
+  .nav-center { display: none; }
+  summary.mobile-menu-summary { display: inline-flex; align-items: center; gap: .5rem; }
+  details.mobile-menu[open] .nav-center { display: flex; flex-direction: column; gap: .75rem; }
+  details.mobile-menu[open] .nav-center a { color: var(--text-color); font-weight: 600; }
+  details.mobile-menu[open] .cta { display: inline-block; margin-top: .5rem; }
+  details.mobile-menu[open] { position: absolute; left: 0; right: 0; top: 60px; background: var(--primary-cream-color); padding: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); z-index: 120; }
+}
 /* cta */
 .cta,
 .hero-cta {
@@ -169,13 +191,13 @@ body.time-page .checklist-header {
 
 /* hover effect */
 .footer-navigation a:hover {
-  color: var(--primary-cream-color);
+  color: var(--font-heading-beige);
 }
 
 .footer-navigation a:hover i,
 .footer-navigation a:hover svg {
   transform: translateY(-2px);
-  color: var(--primary-cream-color);
+  color: var(--font-heading-beige);
 }
 
 

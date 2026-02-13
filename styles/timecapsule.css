@@ -50,9 +50,10 @@
 .affirmation-cards-section {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
+
 
 /* phone-like bottom navigation */
 .time-footer-nav {
