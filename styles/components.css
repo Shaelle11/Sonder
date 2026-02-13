@@ -45,6 +45,18 @@ nav{
   transform: scaleX(1);
   transform-origin: bottom left; /* Slides in from left */
 }
+
+/* Nav link colors should match page H1 headings:
+   - Time-capsule pages (except theme-night) use --text-color
+   - Mood pages use the theme's --primary-assets-color (hero header)
+*/
+body.time-page:not(.theme-night) .nav-center a {
+  color: var(--text-color) !important;
+}
+
+body:not(.time-page) .nav-center a {
+  color: var(--primary-assets-color) !important;
+}
 /* MOBILE: details/summary (CSS-only hamburger) */
 summary.mobile-menu-summary {
   list-style: none;
@@ -58,8 +70,8 @@ summary.mobile-menu-summary {
 
 details.mobile-menu { position: relative; }
   body.time-page .affirmation-card {
-    flex: 0 1 220px;
-    min-width: 160px;
+    flex: 0 0 320px;
+    min-width: 280px;
   }
 
 /* mobile behaviour */
@@ -106,6 +118,16 @@ body.time-page:not(.theme-night) .checklist-header {
   color: var(--text-color) !important;
 }
 
+/* Also ensure specific time themes (morning, afternoon, evening) use --text-color */
+body.theme-morning .hero-header,
+body.theme-afternoon .hero-header,
+body.theme-evening .hero-header,
+body.theme-morning .checklist-header,
+body.theme-afternoon .checklist-header,
+body.theme-evening .checklist-header {
+  color: var(--text-color) !important;
+}
+
 .hero p {
   max-width: 520px;
   font-size: var(--paragraph-font-size);
@@ -136,7 +158,7 @@ body.time-page .affirmation-card-image {
 
 /* AFFIRMATION CARDS */
 .affirmation-card {
-  background: white;
+  background: var(--primary-cream-color);
   border-radius: var(--border-radius-card);
   padding: 1rem;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -145,10 +167,10 @@ body.time-page .affirmation-card-image {
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
-  flex: 0 0 200px;
-  width: 200px;
+  flex: 0 0 320px;
+  width: 320px;
   box-sizing: border-box;
-  height: 380px; /* fixed card height so all cards match */
+  height: 340px;
 }
 
 .affirmation-card:hover {
@@ -159,7 +181,6 @@ body.time-page .affirmation-card-image {
 .affirmation-card-image {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 8px;
   flex: none;
@@ -240,15 +261,15 @@ footer p {
 
 /* Enforce uniform small card size and image dimensions (override earlier rules) */
 .affirmation-card {
-  width: 160px;
-  flex: 0 0 160px;
+  width: 400px;
+  flex: 0 0 320px;
   align-items: center;
 }
 
 .affirmation-card img,
 .affirmation-card-image {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
   flex: none;
