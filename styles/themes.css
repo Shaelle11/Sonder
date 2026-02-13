@@ -11,7 +11,6 @@
   --text-color: #2B2118;
 }
 
- /* golden */ 
 .theme-afternoon {
   --primary-cream-color: #FFF1D6;
   --primary-lavender-glow: #FFD18A;
@@ -32,9 +31,10 @@
 /* dark */
 /* NIGHT THEME TEXT FIX */
 .theme-night {
-  --primary-cream-color: #0E1220;
-  --primary-lavender-glow: #1B2238;
-  --primary-lavender-dreamy: #141A2B;
+  /* reverted to dark night palette */
+  --primary-cream-color: #0f1724;
+  --primary-lavender-glow: #0b1226;
+  --primary-lavender-dreamy: #101424;
   --primary-assets-color: #7C8CFF;
   --text-color: #d4cfcf; /* make text readable */
 }

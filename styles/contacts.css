@@ -17,8 +17,10 @@
 }
 
 .contact-form label {
+  margin: 1rem 0rem 0.5rem 0rem;
+  text-align: left;
   font-weight: 600;
-  color: var(--heading-text-color);
+  color: var(--font-heading-beige);
 }
 
 .contact-form input,
