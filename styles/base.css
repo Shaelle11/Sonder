@@ -30,7 +30,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--text-color);
-}
+} 
 
 body {
   background:
@@ -42,7 +42,7 @@ body {
 h1, h2, h3 {
   font-family: var(--font-heading);
   line-height: 1.2;
-  color: var(--font-heading-beige);
+  color: var(--text-color);
   font-size: var(--header-font-size);
   font-weight: var(--font-weight-headers);
 }

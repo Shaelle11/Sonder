@@ -23,7 +23,7 @@ nav{
 .nav-center a {
   text-decoration: none;
   font-size: 0.95rem;
-  color: var(--font-heading-beige);
+  color: var(--text-color);
   font-weight: 600;
   position: relative;
   padding-bottom: 5px;
@@ -45,6 +45,35 @@ nav{
   transform: scaleX(1);
   transform-origin: bottom left; /* Slides in from left */
 }
+
+/* Still in the works */
+/* MOBILE: details/summary (CSS-only hamburger) */
+summary.mobile-menu-summary {
+  list-style: none;
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+details.mobile-menu { position: relative; }
+  body.time-page .affirmation-card {
+    flex: 0 0 240px;
+    min-width: 200px;
+  }
+
+/* mobile behaviour */
+@media (max-width: 768px) {
+  .nav-center { display: none; }
+  summary.mobile-menu-summary { display: inline-flex; align-items: center; gap: .5rem; }
+  details.mobile-menu[open] .nav-center { display: flex; flex-direction: column; gap: .75rem; }
+  details.mobile-menu[open] .nav-center a { color: var(--text-color); font-weight: 600; }
+  details.mobile-menu[open] .cta { display: inline-block; margin-top: .5rem; }
+  details.mobile-menu[open] { position: absolute; left: 0; right: 0; top: 60px; background: var(--primary-cream-color); padding: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); z-index: 120; }
+}
+
 /* cta */
 .cta,
 .hero-cta {
@@ -68,57 +97,54 @@ nav{
 
 
 .hero-header,
-.checklist-section h2
-{
-  color: var(--primary-assets-color);
+.checklist-section h2 {
+  color: var(--text-color);
 }
 
-/* Time capsule pages should use readable text color for headings */
-body.time-page .hero-header,
-body.time-page .checklist-header {
-  color: var(--text-color) !important;
+
+body.time-page:not(.theme-night) {
+  --hero-color: var(--text-color);
 }
+
+
 
 .hero p {
   max-width: 520px;
   font-size: var(--paragraph-font-size);
 }
 
-
-/* AFFIRMATION CARDS */
-.affirmation-card {
-  background: white;
-  border-radius: var(--border-radius-card);
-  padding: 1rem;
-  width: 240px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
+.affirmation-cards-container {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
 }
 
+.affirmation-card {
+  box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+  background: var(--primary-cream-color);
+  border-radius: var(--border-radius-card);
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  height: 300px;
+}
 .affirmation-card:hover {
   transform: translateY(-4px);
 }
 
 .affirmation-card img,
 .affirmation-card-image {
+  height: 160px;
   width: 100%;
-  height: 240px;
   object-fit: cover;
-  border-radius: 8px;
-  flex: none;
-}
-.feature-icon {
-  background-color: var(--primary-cream-color);
-  padding: 0.5rem;
-  justify-content: left;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
+  aspect-ratio: 4/3;
 }
 
 .card-icon svg {
@@ -131,6 +157,11 @@ body.time-page .checklist-header {
 
 
  /* CHECKLIST ITEMS */
+ .checklist{
+display: grid;
+justify-content: center;
+ }
+
 .checklist-option {
   display: flex;
   align-items: center;
@@ -140,6 +171,7 @@ body.time-page .checklist-header {
   margin-bottom: 0.6rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   cursor: pointer;
+  max-width: 450px;
 }
 
 .checklist-option input {
@@ -183,4 +215,29 @@ body.time-page .checklist-header {
 footer p {
   font-size: 0.85rem;
   opacity: 0.6;
+}
+
+.affirmation-card {
+  width: 400px;
+  flex: 0 0 320px;
+  align-items: center;
+}
+
+.affirmation-card img,
+.affirmation-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: none;
+}
+
+.affirmation-card p {
+  margin: 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 0.25rem;
 }
