@@ -13,7 +13,7 @@ The design avoids visual noise and prioritizes breathing space, soft contrasts, 
 
 These colors form the emotional foundation of the interface.
 
-**Lavender**
+**Soft Pink**
 Represents calm, introspection, softness, and emotional clarity.
 Used for backgrounds, highlights, and mood accents.
 
@@ -119,7 +119,15 @@ Night: Deep blues and muted purples
 
 Mood selections influence tone rather than layout, keeping the interface consistent and predictable.
 
-7. References & Inspiration
+
+7. CSS Structure
+   - Base.css: For setting up design tokens for project
+   - Layout.css: SetUp designs for page layouts
+   - Component.css: Reusable designs for components on different pages
+   - Themes.css: Different themes for various pages
+   - Index.css: Home page specific designs
+
+8. References & Inspiration
 
 The visual inspiration for Sonder draws from:
 
@@ -135,7 +143,7 @@ Digital minimalism
 
 Slow design
 
-8. Consistency Across Pages
+9. Consistency Across Pages
 
 Uniform navigation placement
 
@@ -147,7 +155,7 @@ Familiar layout to avoid disorientation
 
 Consistency reinforces trust and emotional comfort.
 
-9. Closing Visual Intent
+10. Closing Visual Intent
 
 Sonder’s visual system is designed to feel human, gentle, and grounded.
 Rather than demanding attention, it invites stillness—reflecting the idea that self-love can be quiet, slow, and deeply personal.
