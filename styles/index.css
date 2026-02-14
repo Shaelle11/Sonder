@@ -45,6 +45,7 @@
   text-align: left;
    padding: 2rem; 
    border: 2px solid var(--beige-tone-dark);
+   border-radius: var(--border-radius-card);
 }
 
 /* philosophy */
