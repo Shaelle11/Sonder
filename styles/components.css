@@ -46,11 +46,6 @@ nav{
   transform-origin: bottom left; /* Slides in from left */
 }
 
-
-/* .top-header .nav-center a {
-  color: var(--hero-color, var(--primary-assets-color)) !important;
-} */
-
 /* Still in the works */
 /* MOBILE: details/summary (CSS-only hamburger) */
 summary.mobile-menu-summary {
