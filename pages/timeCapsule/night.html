@@ -8,24 +8,27 @@
     <link rel="stylesheet" href="../../styles/base.css" />
 </head>
 <body class="theme-night">
+<header class="top-header">
+    <nav>
 
-    <header class="top-header">
-        <nav>
-            <a href="../../index.html" class="logo">Sonder</a>
-            <section class="nav-center">
-                <a href="../timeCapsule/morning.html" class="night">Morning</a>
-                <a href="../timeCapsule/afternoon.html" class="night">Afternoon</a>
-                <a href="../timeCapsule/evening.html" class="night">Evening</a>
-                <a href="../timeCapsule/night.html" aria-current="page" class="night">Night</a>
-            </section>
-        </nav>
-    </header>
+        <a href="/index.html" class="logo">Sonder</a>
 
-    <main>
-        <section id="night" class="mood-section">
-            <h1 class="hero-header night">Goodnight, sleep well and be kind to yourself.</h1>
+        <section class="nav-center">
+        <a href="morning.html">Morning</a>
+            <a href="./afternoon.html">Afternoon</a>
+            <a href="./evening.html">Evening</a>
+            <a href="./night.html">Night</a>
+        </section>
+    </nav>
+</header>
+    
+<main>
+    <section id="night" class="mood-section">
+        <h1 class="hero-header">Goodnight, sleep well and be kind to yourself.</h1>
 
-            <section class="affirmation-cards-container" aria-label="affirmation-cards">
+            <section class="affirmation-cards-section" aria-label="affirmation-cards">
+                <ul class="affirmation-cards-container">
+                    <li>
                         <article class="affirmation-card">
                             <img class="affirmation-card-image" src="../../images/flowers-at-night.jpg" alt="flowers at night" />
                             <p>The stars are watching over you</p>
