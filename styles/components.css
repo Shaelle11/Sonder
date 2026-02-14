@@ -23,7 +23,7 @@ nav{
 .nav-center a {
   text-decoration: none;
   font-size: 0.95rem;
-  color: var(--font-heading-beige);
+  color: var(--text-color);
   font-weight: 600;
   position: relative;
   padding-bottom: 5px;
@@ -47,9 +47,11 @@ nav{
 }
 
 
-.nav-center a {
+/* .top-header .nav-center a {
   color: var(--hero-color, var(--primary-assets-color)) !important;
-}
+} */
+
+/* Still in the works */
 /* MOBILE: details/summary (CSS-only hamburger) */
 summary.mobile-menu-summary {
   list-style: none;
@@ -76,6 +78,7 @@ details.mobile-menu { position: relative; }
   details.mobile-menu[open] .cta { display: inline-block; margin-top: .5rem; }
   details.mobile-menu[open] { position: absolute; left: 0; right: 0; top: 60px; background: var(--primary-cream-color); padding: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); z-index: 120; }
 }
+
 /* cta */
 .cta,
 .hero-cta {
@@ -100,7 +103,7 @@ details.mobile-menu { position: relative; }
 
 .hero-header,
 .checklist-section h2 {
-  color: var(--hero-color, var(--primary-assets-color));
+  color: var(--text-color);
 }
 
 
@@ -108,23 +111,14 @@ body.time-page:not(.theme-night) {
   --hero-color: var(--text-color);
 }
 
-/* Also ensure specific time themes (morning, afternoon, evening) use --text-color */
-body.theme-morning .hero-header,
-body.theme-afternoon .hero-header,
-body.theme-evening .hero-header,
-body.theme-morning .checklist-header,
-body.theme-afternoon .checklist-header,
-body.theme-evening .checklist-header {
-  color: var(--text-color) !important;
-}
+
 
 .hero p {
   max-width: 520px;
   font-size: var(--paragraph-font-size);
 }
 
-/* Time-capsule specific: center cards and use smaller images */
-body.time-page .affirmation-cards-container {
+.affirmation-cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -132,53 +126,30 @@ body.time-page .affirmation-cards-container {
   gap: 1.5rem;
 }
 
-body.time-page .affirmation-card {
-  flex: 0 1 220px;
-  min-width: 160px;
-}
-
-body.time-page .affirmation-card img,
-body.time-page .affirmation-card-image {
-  height: 160px;
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 4/3;
-}
-
-
-/* AFFIRMATION CARDS */
-  .affirmation-card {
+.affirmation-card {
+  box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
   background: var(--primary-cream-color);
   border-radius: var(--border-radius-card);
   padding: 1rem;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  justify-content: space-between;
   align-items: center;
-  flex: 0 0 240px;
-  width: 240px;
-  box-sizing: border-box;
-  height: 340px;
+  max-width: 300px;
+  height: 300px;
 }
-
 .affirmation-card:hover {
   transform: translateY(-4px);
 }
 
-.affirmation-card {
-  width: 240px;
-  flex: 0 0 240px;
-  align-items: center;
-}
 .affirmation-card img,
 .affirmation-card-image {
+  height: 160px;
   width: 100%;
-  height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-  flex: none;
+  aspect-ratio: 4/3;
 }
 
 .card-icon svg {
@@ -191,6 +162,11 @@ body.time-page .affirmation-card-image {
 
 
  /* CHECKLIST ITEMS */
+ .checklist{
+display: grid;
+justify-content: center;
+ }
+
 .checklist-option {
   display: flex;
   align-items: center;
@@ -200,6 +176,7 @@ body.time-page .affirmation-card-image {
   margin-bottom: 0.6rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   cursor: pointer;
+  max-width: 450px;
 }
 
 .checklist-option input {
@@ -245,7 +222,6 @@ footer p {
   opacity: 0.6;
 }
 
-/* Enforce uniform small card size and image dimensions (override earlier rules) */
 .affirmation-card {
   width: 400px;
   flex: 0 0 320px;
@@ -261,7 +237,6 @@ footer p {
   flex: none;
 }
 
-/* make paragraph content fill remaining card space and center text */
 .affirmation-card p {
   margin: 0;
   flex: 1 1 auto;

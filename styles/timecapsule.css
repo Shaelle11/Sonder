@@ -10,7 +10,7 @@
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--primary-assets-color);
+  color: var(--text-color);
   text-decoration: none;
 }
 

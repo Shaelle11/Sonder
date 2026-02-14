@@ -19,7 +19,7 @@
   --text-color: #2A1C0F;
 }
 
- /* lavender */
+ /* evening lavender */
 .theme-evening {
   --primary-cream-color: #F1ECF8;
   --primary-lavender-glow: #DCD2F1;
@@ -29,55 +29,31 @@
 }
 
 
-/* NIGHT THEME TEXT FIX */
+
 .theme-night {
-  /* reverted to dark night palette */
   --primary-cream-color: #0f1724;
   --primary-lavender-glow: #0b1226;
   --primary-lavender-dreamy: #101424;
   --primary-assets-color: #7C8CFF;
-  --text-color: #f7f5f2; /* light text for night */
+  --text-color: #13131c;
 }
 
-/* Keep only the night header cream-colored */
-.theme-night .hero-header,
-.theme-night .checklist-header {
-  color: #fdfbf7;
+/* night header color */
+.theme-night .night{
+  color: #fdfbf7 !important;
 }
 
-/* Keep paragraph text in night theme at the previous readable color */
-.theme-night p {
-  color: #211c28;
-}
 
-/* Keep footer navigation and checklist item text readable (dark) in night theme */
-.theme-night .footer-navigation a,
-.theme-night .footer-navigation a i,
-.theme-night .footer-navigation a svg,
-.theme-night .checklist,
-.theme-night .checklist-option,
-.theme-night .checklist-option label {
-  color: #211c28;
-}
 
-/* Make footer nav hover warm-cream in night theme */
-.theme-night .footer-navigation a:hover,
-.theme-night .footer-navigation a:hover i,
-.theme-night .footer-navigation a:hover svg {
-  color: #fdfbf7;
-}
-
-/* Affirmation cards in night theme should match other time-capsule pages
-   — light background with readable dark text */
+/* Affirmation cards in night theme */
 .theme-night .affirmation-card {
   background: #ffffff;
   color: #211c28;
-}
+} 
 
 .theme-night .affirmation-card p {
   color: #211c28;
 }
-
 
 
  /* MOOD THEMES */

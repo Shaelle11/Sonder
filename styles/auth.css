@@ -4,7 +4,8 @@
   outline: none;
   padding: 0;
 }
-.auth-page, .auth-container { font-family: var(--font-body); 
+.auth-page
+.auth-container { font-family: var(--font-body); 
 }
 
 .auth-container {
