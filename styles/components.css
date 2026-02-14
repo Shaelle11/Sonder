@@ -201,13 +201,13 @@ justify-content: center;
 
 /* hover effect */
 .footer-navigation a:hover {
-  color: var(--primary-cream-color);
+  color: var(--font-heading-beige);
 }
 
 .footer-navigation a:hover i,
 .footer-navigation a:hover svg {
   transform: translateY(-2px);
-  color: var(--primary-cream-color);
+  color: var(--font-heading-beige);
 }
 
 
