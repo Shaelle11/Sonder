@@ -39,7 +39,6 @@ A brief reference for the CSS custom properties used across the project. Use the
 
 Guidelines
 - Prefer tokens over hard-coded colors when styling components.
-- Use `--hero-color` (set per page) for hero headings so navigation can match H1 color consistently.
-- For night theme exceptions, overrides live in `styles/themes.css`; affirmations cards are intentionally made light for readability.
+- For night theme exceptions, overrides live in `styles/themes.css`; affirmations cards, headings and nav are intentionally made light for readability.
 
 This is a short guide — see `styles/` for concrete implementations and `Design Documentation.md` for visual rationale.
