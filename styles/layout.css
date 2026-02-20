@@ -21,8 +21,7 @@ margin: auto;
 }
 
 .nav-left,
-.nav-center,
-
+.nav-items,
 .nav-right {
   display: flex;
   align-items: center;
@@ -86,4 +85,25 @@ margin: auto;
 footer {
   text-align: center;
   padding: 3rem 2rem;
+}
+
+/* resposiveness*/
+@media (max-width: 768px) 
+
+{
+  .nav-items,
+   .nav-right{ 
+    display: none;
+   }
+  .sidebar{
+    left: 0;
+
+  }
+  .content{
+    margin-left: 250px
+  }
+
+  .hamburger {
+    display: none;
+  }
 }

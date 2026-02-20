@@ -20,7 +20,7 @@ nav{
 
 /* nav-links */
 
-.nav-center a {
+.nav-items a {
   text-decoration: none;
   font-size: 0.95rem;
   color: var(--text-color);
@@ -29,7 +29,7 @@ nav{
   padding-bottom: 5px;
 
 }
-.nav-center a::after {
+.nav-items a::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -41,38 +41,73 @@ nav{
   transition: transform 0.3s ease-out; /* Smooth transition */
 }
 
-.nav-center a:hover::after {
+.nav-items a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left; /* Slides in from left */
 }
 
-/* Still in the works */
-/* MOBILE: details/summary (CSS-only hamburger) */
-summary.mobile-menu-summary {
-  list-style: none;
+.sidebar{
+   background-color: var(--primary-cream-color);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+   z-index: 0;
+   transition: left 0.3s ease-in-out;
+    margin-top: 2rem;
+}
+
+.sidebar .nav-items {
   display: none;
-  background: transparent;
-  border: none;
-  font-size: 1.6rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+ 
+}
+
+
+.hamburger, 
+.x{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 20px;
   cursor: pointer;
-  color: var(--text-color);
+  border: none;
+  background: none;
 }
 
-details.mobile-menu { position: relative; }
-  body.time-page .affirmation-card {
-    flex: 0 0 240px;
-    min-width: 200px;
-  }
-
-/* mobile behaviour */
-@media (max-width: 768px) {
-  .nav-center { display: none; }
-  summary.mobile-menu-summary { display: inline-flex; align-items: center; gap: .5rem; }
-  details.mobile-menu[open] .nav-center { display: flex; flex-direction: column; gap: .75rem; }
-  details.mobile-menu[open] .nav-center a { color: var(--text-color); font-weight: 600; }
-  details.mobile-menu[open] .cta { display: inline-block; margin-top: .5rem; }
-  details.mobile-menu[open] { position: absolute; left: 0; right: 0; top: 60px; background: var(--primary-cream-color); padding: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); z-index: 120; }
+.bar, .xbar{
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-assets-color);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  
 }
+.xbar:nth-child(1){
+  transform: translateY(5px) rotate(45deg);
+}
+.xbar:nth-child(2){
+  opacity: 0;
+}
+.xbar:nth-child(3){
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+
 
 /* cta */
 .cta,
@@ -154,7 +189,7 @@ body.time-page:not(.theme-night) {
 .card:hover .card-icon svg {
   transform: scale(1.1);
 }
-
+ 
 
  /* CHECKLIST ITEMS */
  .checklist{
@@ -241,3 +276,12 @@ footer p {
   text-align: center;
   padding: 0 0.25rem;
 }
+ @media screen and (max-width: 750px) {
+  .sidebar .nav-items {
+    display: flex;
+  }
+ .hamburger {
+  display: flex;  
+ }
+  
+ }
