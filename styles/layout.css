@@ -1,7 +1,7 @@
 /* global layout */
 
 header {
-  padding: 1rem 4rem;
+  padding: 1rem 1.7rem 1rem 3rem;
   display: grid;
 }
 
@@ -100,7 +100,7 @@ footer {
 
   }
   .content{
-    margin-left: 250px
+    margin-right: 50px
   }
 
   .hamburger {

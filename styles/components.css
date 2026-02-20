@@ -102,6 +102,59 @@ nav{
   transition: left 0.3s ease-in-out;
 }
 
+.page-layout { 
+  display:flex;
+width: auto;
+   }
+
+.nav-rail {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70px;
+  max-height: calc(90vh); 
+  background:
+  radial-gradient( 70%, var(--primary-cream-color) 0%, transparent 60%),
+  var(--primary-cream-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 20px;
+  border-radius: 20px;
+  transform-origin: top center;
+  transition: max-height 360ms cubic-bezier(.2,.9,.2,1), transform 280ms ease, opacity 200ms ease;
+  margin: 3rem 0rem 0rem 2rem;
+}
+.nav-rail-toggle{
+  cursor: pointer;
+  font-size: 25px;
+}
+.nav-rail i {
+font-size: 22px;
+line-height: 1;
+transition: transform .12s ease, color .12s ease;
+}
+.nav-rail a.active,
+.nav-rail a[aria-current="page"] {
+color: var(--primary-assets-color);
+}
+
+/* collapsed when unchecked */
+#time-toggle:not(:checked) ~ .nav-rail {
+    min-height: 90vh;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* expanded when checked */
+#time-toggle:checked ~ .nav-rail {
+ min-height: 0;
+  opacity: 0;
+  transform: translateY(-12px);
+  
+}
 
 
 /* cta */
