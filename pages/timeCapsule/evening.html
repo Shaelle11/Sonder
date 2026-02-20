@@ -13,26 +13,35 @@
     <nav>
       <a href="../../index.html" class="logo">Sonder</a>
     </nav>
+    <label for="time-toggle" class="nav-rail-toggle" aria-controls="time-rail" aria-expanded="true"><i class="ph-bold ph-clock" aria-hidden="true"></i></label>
   </header>
 
   <main class="page-layout">
-    <input type="checkbox" id="time-toggle" hidden>
-    <label for="time-toggle" class="nav-rail-toggle" aria-controls="time-rail" aria-expanded="true"><i class="ph-bold ph-clock" aria-hidden="true"></i><span class="visually-hidden">Time</span></label>
+    <input type="checkbox" id="time-toggle" checked hidden>
     <aside id="time-rail" class="nav-items nav-rail" aria-label="time-rail">
      <a href="morning.html" aria-label="Morning"><i class="ph-bold ph-sun" aria-hidden="true"></i></a>
      <a href="afternoon.html" aria-label="Afternoon"><i class="ph-bold ph-sun-horizon" aria-hidden="true"></i></a>
-     <a href="evening.html" aria-label="Evening"><i class="ph-bold ph-cloud-sunset" aria-hidden="true"></i></a>
-     <a href="night.html" aria-label="Night"><i class="ph-bold ph-moon" aria-hidden="true"></i></a>
+     <a href="evening.html" aria-label="Evening" aria-current="page"><i class="ph-bold ph-moon" aria-hidden="true"></i></a>
+     <a href="night.html" aria-label="Night"><i class="ph-bold ph-moon-stars" aria-hidden="true"></i></a>
     </aside>
-            <article class="affirmation-card">
+    <section class="content">
+      <section id="evening" class="mood-section">
+        <h1 class="hero-header">Good evening, take a moment to unwind and reflect.</h1>
+           <section class="affirmation-cards-section" aria-label="affirmation-cards">
+        <ul class="affirmation-cards-container">
+            <li><article class="affirmation-card">
+              <img class="affirmation-card-image" src="../../images/dusk-over-sea.jpg" alt="sunset" />
+              <p>As the day ends, remember to be proud of how far you've come</p>
+            </article></li>
+        <li><article class="affirmation-card">
               <img class="affirmation-card-image" src="../../images/lamp-and-book.jpg" alt="lamp and book" />
               <p>Let go of what you cannot change</p>
-            </article>
+            </article></li>
         
-            <article class="affirmation-card">
+            <li><article class="affirmation-card">
               <img class="affirmation-card-image" src="../../images/calm-lake.jpg" alt="calm lake" />
               <p>Prepare your heart for rest</p>
-            </article>
+            </article></li>
           
       </section>
 
