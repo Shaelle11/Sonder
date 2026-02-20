@@ -23,10 +23,18 @@
         <a href="contacts.html" aria-current="page">Contact</a>
       </section>
     </nav>
+
+        <label  class="hamburger" for="sidebar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </label>   
+</section>
+
         <a href="./auth/entry.html" class="cta">
           Enter Your Space
         </a>
-    </section>
+    
     <!-- PAGE INTRO -->
      <section class="hero">
       <h1>Get in touch</h1>
@@ -36,6 +44,27 @@
       </p>
       </section>
 </header>
+
+<input type="checkbox" name="sidebar-toggle" id="sidebar-toggle" hidden>
+<aside class="sidebar active" id="sidebar">
+   
+  <label  class="hamburger" for="sidebar-toggle">
+        <span class="xbar"></span>
+        <span class="xbar"></span>
+        <span class="xbar"></span>
+        </label>
+     
+
+       <nav class="nav-items sidebar-items">
+        <a href="../index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="contacts.html">Contact</a>
+      </nav>
+      <section class="auth-actions ">
+      <a class="cta" href="././pages/auth/signin.html">Sign in</a>
+      <a class="cta " href="././pages/auth/signup.html">Sign up</a>
+      </section>
+    </aside>
 
 
   <main>
