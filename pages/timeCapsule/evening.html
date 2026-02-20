@@ -12,44 +12,18 @@
   <header class="top-header">
     <nav>
       <a href="../../index.html" class="logo">Sonder</a>
-      <section class="nav-items">
-        <a href="../timeCapsule/morning.html">Morning</a>
-        <a href="../timeCapsule/afternoon.html">Afternoon</a>
-        <a href="../timeCapsule/evening.html" aria-current="page">Evening</a>
-        <a href="../timeCapsule/night.html">Night</a>
-      </section>
     </nav>
   </header>
-  <aside class="nav-items nav-rail" aria-label="time-rail">
-     <a href="morning.html" aria-label="Morning"> 
-        <i class="ph-bold ph-sun" aria-hidden="true">
-     </i> 
-    </a>
-     <a href="./afternoon.html" aria-current="page" class="active" aria-label="Afternoon">
-         <i class="ph-bold ph-sun-horizon" aria-hidden="true">
-        </i> 
-     </a>
-         <a href="./evening.html" aria-label="Evening"> 
-            <i class="ph-bold ph-moon" aria-hidden="true">
-            </i> 
-        </a>
-             
-        <a href="./night.html" aria-label="Night"> 
-                <i class="ph-bold ph-moon-stars" aria-hidden="true">
-                </i>
-             </a>
-             </aside>
 
-  <main>
-    <section id="evening" class="mood-section">
-      <h1 class="hero-header">Good evening, time to gently unwind.</h1>
-
-      <section class="affirmation-cards-container" aria-label="affirmation-cards">
-          
-            <article class="affirmation-card">
-              <img class="affirmation-card-image" src="../../images/dusk-over-sea.jpg" alt="dusk over sea" />
-              <p>The day is done; you did enough</p>
-            </article>
+  <main class="page-layout">
+    <input type="checkbox" id="time-toggle" hidden>
+    <label for="time-toggle" class="nav-rail-toggle" aria-controls="time-rail" aria-expanded="true"><i class="ph-bold ph-clock" aria-hidden="true"></i><span class="visually-hidden">Time</span></label>
+    <aside id="time-rail" class="nav-items nav-rail" aria-label="time-rail">
+     <a href="morning.html" aria-label="Morning"><i class="ph-bold ph-sun" aria-hidden="true"></i></a>
+     <a href="afternoon.html" aria-label="Afternoon"><i class="ph-bold ph-sun-horizon" aria-hidden="true"></i></a>
+     <a href="evening.html" aria-label="Evening"><i class="ph-bold ph-cloud-sunset" aria-hidden="true"></i></a>
+     <a href="night.html" aria-label="Night"><i class="ph-bold ph-moon" aria-hidden="true"></i></a>
+    </aside>
             <article class="affirmation-card">
               <img class="affirmation-card-image" src="../../images/lamp-and-book.jpg" alt="lamp and book" />
               <p>Let go of what you cannot change</p>

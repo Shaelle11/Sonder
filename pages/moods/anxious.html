@@ -5,66 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css" />
     <link rel="stylesheet" href="../../styles/base.css">
-    <title>SONDER — Anxious</title>
+    <title>Sonder, Anxious</title>
 </head>
 <body class="theme-anxious">
-
      <header class="top-header">
         <nav>
-
         <a href="../../index.html" class="logo">Sonder</a>
-
-        <section class="nav-center">
-            <a href="../timeCapsule/morning.html">Morning</a>
-            <a href="../timeCapsule/afternoon.html">Afternoon</a>
-            <a href="../timeCapsule/evening.html">Evening</a>
-            <a href="../timeCapsule/night.html">Night</a>
-         </section>   
     </nav>
-
+ <label for="time-toggle" class="nav-rail-toggle" aria-controls="time-rail" aria-expanded="true"><i class="ph-bold ph-clock" aria-hidden="true"></i></label>
     </header>
-    <aside class="nav-items nav-rail" aria-label="time-rail">
-     <a href="morning.html" aria-label="Morning"> 
-        <i class="ph-bold ph-sun" aria-hidden="true">
-     </i> 
-    </a>
-     <a href="./afternoon.html" aria-current="page" class="active" aria-label="Afternoon">
-         <i class="ph-bold ph-sun-horizon" aria-hidden="true">
-        </i> 
-     </a>
-         <a href="./evening.html" aria-label="Evening"> 
-            <i class="ph-bold ph-moon" aria-hidden="true">
-            </i> 
-        </a>
-             
-        <a href="./night.html" aria-label="Night"> 
-                <i class="ph-bold ph-moon-stars" aria-hidden="true">
-                </i>
-             </a>
-             </aside>
+<main class="page-layout">
+    <input type="checkbox" id="time-toggle" hidden>
+     <aside id="time-rail" class="nav-items nav-rail" aria-label="time-rail">
+      <a href="../timeCapsule/morning.html" aria-label="Morning"><i class="ph-bold ph-sun" aria-hidden="true"></i></a>
+      <a href="../timeCapsule/afternoon.html" aria-label="Afternoon"><i class="ph-bold ph-sun-horizon" aria-hidden="true"></i></a>
+      <a href="../timeCapsule/evening.html" aria-label="Evening"><i class="ph-bold ph-moon" aria-hidden="true"></i></a>
+      <a href="../timeCapsule/night.html" aria-label="Night"><i class="ph-bold ph-moon-stars" aria-hidden="true"></i></a>
+     </aside>
 
 
-    <main id="anxious" class="mood-section">
-        <!-- ===== MOOD: ANXIOUS ===== -->
-       
+    <section class="content">
+       <section id="anxious" class="mood-section">
             <h1 class="hero-header">It's okay to pause and breathe.</h1>
 
-            <!-- Affirmation cards container -->
             <section class="affirmation-cards-section" aria-label="affirmation-cards">
-
                 <ul class="affirmation-cards-container">
                          <li><article class="affirmation-card">
                                         <img class="affirmation-card-image" src="../../images/anxiety-beautiful-bicolor-plant-details.jpg" alt="beautiful plant" />
                                         <p>"You are allowed to feel what you're feeling."</p>
                                     </article>
                             </li>
-
                             <li><article class="affirmation-card">
                                         <img class="affirmation-card-image" src="../../images/anxiety-relax-written-sand.jpg" alt="relax written on sand" />
                                         <p>"This moment will pass — breathe with it."</p>
                                     </article>
                             </li>
-
                             <li><article class="affirmation-card">
                                         <img class="affirmation-card-image" src="../../images/anxiety-many-drops-water-falling-leaves.jpg" alt="water drops" /> 
                                         <p>"You are grounding yourself with every breath."</p>
@@ -100,6 +75,7 @@
     
         </ul>
         </section>
+    </section>
     </main>
 
 
