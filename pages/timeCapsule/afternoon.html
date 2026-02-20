@@ -20,9 +20,35 @@
             <a href="./night.html">Night</a>
         </section>
     </nav>
+      <label  class="time-toggle nav-rail-toggle" aria-controls="time-rail" for="time-toggle">
+       <i class="ph-bold ph-clock" aria-hidden="true"></i>
+        </label>
 </header>
+<main class="page-layout">
+    <input type="checkbox" id="time-toggle" class="hidden" checked hidden>
+    <aside id="time-rail" class="nav-items nav-rail" aria-label="time-rail">
+     <a href="morning.html" aria-label="Morning"> 
+        <i class="ph-bold ph-sun" aria-hidden="true">
+     </i> 
+     </a>
+    
+     <a href="./afternoon.html" aria-current="page" class="active" aria-label="Afternoon">
+         <i class="ph-bold ph-sun-horizon" aria-hidden="true">
+        </i>
+     </a> 
+     
+         <a href="./evening.html" aria-label="Evening"> 
+            <i class="ph-bold ph-moon" aria-hidden="true">
+            </i> 
+        </a>
+             
+        <a href="./night.html" aria-label="Night"> 
+                <i class="ph-bold ph-moon-stars" aria-hidden="true">
+                </i>
+             </a>
+             </aside>
 
-    <main>
+    <section class="content">
         <section id="afternoon" class="mood-section">
             <h1 class="hero-header">Good afternoon, don't forget to take a pause and breathe.</h1>
 
@@ -58,8 +84,8 @@
                 </ul>
             </section>
         </section>
-    </main>
-
+    </section>
+</main>
     <nav class="footer-navigation">
         <a href="../moods/driven.html"><i class="ph-bold ph-solar-panel"></i><span>Driven</span></a>
         <a href="../moods/relaxed.html"><i class="ph-bold ph-atom"></i><span>Relaxed</span></a>
