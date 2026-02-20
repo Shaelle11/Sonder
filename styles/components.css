@@ -54,36 +54,40 @@ nav{
   flex-direction: column;
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -350px;
   width: 250px;
   height: 100%;
    z-index: 0;
    transition: left 0.3s ease-in-out;
-    margin-top: 2rem;
+   padding: 1rem;
 }
 
 .sidebar .nav-items {
   display: none;
   flex-direction: column;
   gap: 1.5rem;
-  margin-top: 2rem;
  
 }
 
 
-.hamburger, 
-.x{
+.hamburger{
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 35px;
+  width: 25px;
   height: 20px;
   cursor: pointer;
   border: none;
   background: none;
 }
+.closebar{
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--primary-assets-color);
+  align-self: flex-end;
+}
 
-.bar, .xbar{
+.bar{
   display: block;
   height: 3px;
   width: 100%;
@@ -91,15 +95,6 @@ nav{
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
   
-}
-.xbar:nth-child(1){
-  transform: translateY(5px) rotate(45deg);
-}
-.xbar:nth-child(2){
-  opacity: 0;
-}
-.xbar:nth-child(3){
-  transform: translateY(-10px) rotate(-45deg);
 }
 
 #sidebar-toggle:checked ~ .sidebar {

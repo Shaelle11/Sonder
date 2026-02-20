@@ -80,7 +80,7 @@
 .guest-link {
    text-decoration: none;
     font-size: 0.95rem; 
-    color: var(--text-color); 
+    color: var(--primary-assets-color); 
     font-weight:500; opacity:1;
      transition: opacity 0.2s ease; 
      display:block; text-align:center; 
