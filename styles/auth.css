@@ -35,7 +35,7 @@
   margin: 1rem 0 0.5rem 0;
   text-align: left;
   font-weight: 600;
-  color: var(--font-heading-beige);
+  color: var(--text-color);
 }
  
 .auth-form input, .auth-form textarea {
@@ -46,7 +46,7 @@
   color: var(--text-color);
   background: white;
   box-shadow: inset 0 -1px 0 rgba(33,28,40,0.04);
-  border: 2px solid var(--warm-beige-tone);
+  border: 2px solid var(--primary-assets-color);
 }
 .auth-form input,
 .auth-form .muted {
@@ -70,11 +70,17 @@
    text-align:center;
    }
 
-
+.forgot-password {
+  font-size: 0.9rem;
+  color: var(--primary-assets-color);
+  text-decoration: none;
+  margin-top: -0.5rem;
+  display: block;
+}
 .guest-link {
    text-decoration: none;
     font-size: 0.95rem; 
-    color: var(--text-color); 
+    color: var(--primary-assets-color); 
     font-weight:500; opacity:1;
      transition: opacity 0.2s ease; 
      display:block; text-align:center; 

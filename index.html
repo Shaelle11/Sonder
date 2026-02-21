@@ -16,19 +16,27 @@
 
     <!-- NAVIGATION -->
     <section class="top-header">
+      
       <nav>
         <a href="index.html" class="logo">Sonder</a>
-      <section class="nav-center">
+      <section class="nav-items">
         <a href="index.html">Home</a>
         <a href="./pages/about.html">About</a>
         <a href="./pages/contacts.html">Contact</a>
       </section>
     </nav>
-        <a href="./pages/auth/entry.html" class="cta">
-          Enter Your Space
-        </a>
-    </section>
+    <section class="nav-right auth-actions">
+      <a class="cta" href="././pages/auth/signin.html">Sign in</a>
+      <a class="cta " href="././pages/auth/signup.html">Sign up</a>
+      </section>
 
+        <label  class="hamburger" for="sidebar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </label>
+        
+    </section>
     <!-- HERO -->
     <section class="hero">
       <h1>Love, but inward.</h1>
@@ -39,13 +47,30 @@
         and reminds you that care can begin with you.
       </p>
 
-      <a href="./pages/auth/entry.html" class="hero-cta">
+      <a href="././pages/auth/signup.html" class="hero-cta">
         Begin with Your Moment
       </a>
     </section>
-
   </header>
+  <input type="checkbox" name="sidebar-toggle" id="sidebar-toggle" hidden>
+  
+ <aside class="sidebar active" id="sidebar">
+    <a href="../index.html" class="logo">Sonder</a>
+  <label  class="closebar" for="sidebar-toggle">
+       x
+        </label>
+     
 
+       <nav class="nav-items sidebar-items">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="./pages/about.html">About</a>
+        <a href="./pages/contacts.html">Contact</a>
+      </nav>
+      <section class="auth-actions ">
+      <a class="cta" href="././pages/auth/signin.html">Sign in</a>
+      <a class="cta " href="././pages/auth/signup.html">Sign up</a>
+      </section>
+    </aside>
 
   <!-- MAIN CONTENT -->
   <main>
@@ -129,6 +154,5 @@
   <footer>
     <p>&copy; 2026 Sonder by Nanji & Florence.</p>
   </footer>
-
 </body>
 </html>

@@ -15,16 +15,24 @@
     <section class="top-header">
       <nav>
         <a href="../index.html" class="logo">Sonder</a>
-      <section class="nav-center">
+      <section class="nav-items">
         <a href="../index.html">Home</a>
         <a href="about.html" aria-current="page">About</a>
         <a href="contacts.html">Contact</a>
       </section>
     </nav>
-        <a href="./auth/entry.html" class="cta">
-          Enter Your Space
-        </a>
+   <section class="nav-right auth-actions">
+      <a class="cta" href="././pages/auth/signin.html">Sign in</a>
+      <a class="cta " href="././pages/auth/signup.html">Sign up</a>
     </section>
+        <label  class="hamburger" for="sidebar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </label>   
+</section>
+
+    
     <!-- PAGE INTRO -->
    <section class="hero">
    <h1>About Sonder</h1>
@@ -35,6 +43,28 @@
   </p>
  </section>
 </header>
+
+<input type="checkbox" name="sidebar-toggle" id="sidebar-toggle" hidden>
+  
+ <aside class="sidebar active" id="sidebar">
+    <a href="../index.html" class="logo">Sonder</a>
+  <label  class="closebar" for="sidebar-toggle">
+       x
+        </label>
+     
+      <nav class="nav-items sidebar-items">
+        <a href="../index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="./contacts.html">Contact</a>
+      </nav>
+      <section class="auth-actions ">
+      <a class="cta" href="../pages/auth/signin.html">Sign in</a>
+      <a class="cta " href=".././pages/auth/signup.html">Sign up</a>
+      </section>
+    </aside>
+
+
+
 <main>
     <!-- WHY SONDER -->
    <section class="about-purpose">

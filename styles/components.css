@@ -20,7 +20,7 @@ nav{
 
 /* nav-links */
 
-.nav-center a {
+.nav-items a {
   text-decoration: none;
   font-size: 0.95rem;
   color: var(--text-color);
@@ -29,7 +29,7 @@ nav{
   padding-bottom: 5px;
 
 }
-.nav-center a::after {
+.nav-items a::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -41,38 +41,121 @@ nav{
   transition: transform 0.3s ease-out; /* Smooth transition */
 }
 
-.nav-center a:hover::after {
+.nav-items a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left; /* Slides in from left */
 }
 
-/* Still in the works */
-/* MOBILE: details/summary (CSS-only hamburger) */
-summary.mobile-menu-summary {
-  list-style: none;
+.sidebar{
+   background-color: var(--primary-cream-color);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 250px;
+  height: 100%;
+   z-index: 0;
+   transition: left 0.3s ease-in-out;
+   padding: 1rem;
+}
+
+.sidebar .nav-items {
   display: none;
-  background: transparent;
-  border: none;
-  font-size: 1.6rem;
+  flex-direction: column;
+  gap: 1.5rem;
+ 
+}
+
+
+.hamburger{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
   cursor: pointer;
-  color: var(--text-color);
+  border: none;
+  background: none;
+}
+.closebar{
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--primary-assets-color);
+  align-self: flex-end;
 }
 
-details.mobile-menu { position: relative; }
-  body.time-page .affirmation-card {
-    flex: 0 0 240px;
-    min-width: 200px;
-  }
-
-/* mobile behaviour */
-@media (max-width: 768px) {
-  .nav-center { display: none; }
-  summary.mobile-menu-summary { display: inline-flex; align-items: center; gap: .5rem; }
-  details.mobile-menu[open] .nav-center { display: flex; flex-direction: column; gap: .75rem; }
-  details.mobile-menu[open] .nav-center a { color: var(--text-color); font-weight: 600; }
-  details.mobile-menu[open] .cta { display: inline-block; margin-top: .5rem; }
-  details.mobile-menu[open] { position: absolute; left: 0; right: 0; top: 60px; background: var(--primary-cream-color); padding: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); z-index: 120; }
+.bar{
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-assets-color);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  
 }
+
+#sidebar-toggle:checked ~ .sidebar {
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+.page-layout { 
+  display:flex;
+width: auto;
+   }
+
+.nav-rail {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70px;
+  max-height: calc(90vh); 
+  background:
+  radial-gradient( 70%, var(--primary-cream-color) 0%, transparent 60%),
+  var(--primary-cream-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 20px;
+  border-radius: 20px;
+  transform-origin: top center;
+  transition: max-height 360ms cubic-bezier(.2,.9,.2,1), transform 280ms ease, opacity 200ms ease;
+  margin: 3rem 0rem 0rem 2rem;
+}
+.nav-rail-toggle{
+  cursor: pointer;
+  font-size: 25px;
+}
+.nav-rail i {
+font-size: 22px;
+line-height: 1;
+transition: transform .12s ease, color .12s ease;
+}
+.nav-rail a.active,
+.nav-rail a[aria-current="page"] {
+color: var(--primary-assets-color);
+}
+
+/* collapsed when unchecked */
+#time-toggle:not(:checked) ~ .nav-rail {
+    min-height: 90vh;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* expanded when checked */
+#time-toggle:checked ~ .nav-rail {
+ min-height: 0;
+  opacity: 0;
+  transform: translateY(-12px);
+  
+}
+
 
 /* cta */
 .cta,
@@ -154,7 +237,7 @@ body.time-page:not(.theme-night) {
 .card:hover .card-icon svg {
   transform: scale(1.1);
 }
-
+ 
 
  /* CHECKLIST ITEMS */
  .checklist{
@@ -241,3 +324,12 @@ footer p {
   text-align: center;
   padding: 0 0.25rem;
 }
+ @media screen and (max-width: 750px) {
+  .sidebar .nav-items {
+    display: flex;
+  }
+ .hamburger {
+  display: flex;  
+ }
+  
+ }

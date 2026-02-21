@@ -26,13 +26,13 @@
     --border-radius-btn: 40px;
 }
 
-body{
+body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--text-color);
 } 
 
-body{
+body {
   background:
     radial-gradient(circle at 20% 30%, var(--primary-lavender-dreamy) 0%, transparent 40%),
     radial-gradient(circle at 80% 70%, var(--primary-assets-color) 0%, transparent 50%),

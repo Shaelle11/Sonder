@@ -9,21 +9,31 @@
 </head>
 
 <body>
+
+
   <header>
+
     <!-- NAVIGATION -->
     <section class="top-header">
       <nav>
         <a href="../index.html" class="logo">Sonder</a>
-      <section class="nav-center">
+      <section class="nav-items">
         <a href="../index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="contacts.html" aria-current="page">Contact</a>
+        <a href="contacts.html" class="active" aria-current="page">Contact</a>
       </section>
     </nav>
-        <a href="./auth/entry.html" class="cta">
-          Enter Your Space
-        </a>
+     <section class="nav-right auth-actions">
+      <a class="cta" href="../pages/auth/signin.html">Sign in</a>
+      <a class="cta " href="../pages/auth/signup.html">Sign up</a>
     </section>
+        <label  class="hamburger" for="sidebar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </label>   
+</section>
+
     <!-- PAGE INTRO -->
      <section class="hero">
       <h1>Get in touch</h1>
@@ -34,9 +44,28 @@
       </section>
 </header>
 
+<input type="checkbox" name="sidebar-toggle" id="sidebar-toggle" hidden>
+  
+ <aside class="sidebar active" id="sidebar">
+   <a href="../index.html" class="logo">Sonder</a>
+  <label  class="closebar" for="sidebar-toggle">
+       x
+        </label>
+      <nav class="nav-items sidebar-items">
+        <a href="../index.html" class="active" aria-current="page">Home</a>
+        <a href="./about.html">About</a>
+        <a href="contacts.html">Contact</a>
+      </nav>
+      <section class="auth-actions ">
+      <a class="cta" href=".././pages/auth/signin.html">Sign in</a>
+      <a class="cta " href=".././pages/auth/signup.html">Sign up</a>
+      </section>
+    </aside>
+
 
   <main>
     <!-- CONTACT FORM -->
+   
       <form class="contact-form" action="#" method="post" aria-label="Contact form">
         <fieldset>
 

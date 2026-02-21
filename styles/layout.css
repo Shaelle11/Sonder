@@ -1,7 +1,7 @@
 /* global layout */
 
 header {
-  padding: 1rem 4rem;
+  padding: 1rem 1.7rem 1rem 3rem;
   display: grid;
 }
 
@@ -21,8 +21,7 @@ margin: auto;
 }
 
 .nav-left,
-.nav-center,
-
+.nav-items,
 .nav-right {
   display: flex;
   align-items: center;
@@ -86,4 +85,25 @@ margin: auto;
 footer {
   text-align: center;
   padding: 3rem 2rem;
+}
+
+/* resposiveness*/
+@media (max-width: 768px) 
+
+{
+  .nav-items,
+   .nav-right{ 
+    display: none;
+   }
+  .sidebar{
+    left: 0;
+
+  }
+  .content{
+    margin-right: 50px
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
