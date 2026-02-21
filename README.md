@@ -29,6 +29,15 @@ Design & Implementation:
 ## Nanji Lakan and Florence Onwuegbuzie
 can be found in our google sheets at https://docs.google.com/spreadsheets/d/1BvVfKBTCzat4DLeq2cD9e1ykY8tQ7AD1aZLOSBxs9CI/edit?usp=sharing
 
+Individual Case Studies
+Both collaborators created individual case studies on Medium, sharing their unique perspectives and contributions to the project:
+
+Nanji’s Case Study:
+https://medium.com/@Youtenstudio/sonder-8c10e8b65073
+
+Florence’s Case Study:
+https://medium.com/@florenceworkhub/designing-a-self-love-website-building-sonder-c1aad49c9240
+
 ---
 
 ## Style Guide — CSS variables
