@@ -32,7 +32,7 @@ These insights informed the visual system and content tone in the design documen
 4. Build: authored static pages under the `pages/` directory and a single stylesheet at `styles/style.css` for theming and transitions.
 
 ## Visual System
-- Colors: soft lavenders, creams, muted lilacs, warm beiges, and deep night blues to distinguish time capsules while keeping contrast gentle.
+- Colors: soft lavenders, creams, warm pink, neutral dark, and deep night blues to distinguish time capsules while keeping contrast gentle.
 - Typography: a warm serif for headings and a clean sans-serif for body text—large headings, generous line spacing, minimal emphasis on bold colors.
 - Layout: one-screen, centered cards with generous breathing room and rounded elements to avoid visual sharpness.
 
