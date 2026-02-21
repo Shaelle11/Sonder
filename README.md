@@ -9,9 +9,10 @@ Highlights
 
   # CASE STUDY
 
-Read the full case study for background, process, and design rationale: [Case Study.md](Case%20Study.md)
-Case study by Nanji Lakan - https://medium.com/@Youtenstudio/sonder-8c10e8b65073
-Case study by Florence Onwuegbuzie - https://medium.com/@florenceworkhub/designing-a-self-love-website-building-sonder-c1aad49c9240
+Read the full case study for background, process, and design rationale: 
+- [Case Study.md](Case%20Study.md)
+- Case study by Nanji Lakan - https://medium.com/@Youtenstudio/sonder-8c10e8b65073
+- Case study by Florence Onwuegbuzie - https://medium.com/@florenceworkhub/designing-a-self-love-website-building-sonder-c1aad49c9240
 
 and a Sample of some of the designs we've played around with https://stitch.withgoogle.com/projects/10844331319545540294
 
