@@ -7,7 +7,12 @@ Highlights
 - Mood-driven reflections and gentle self-care prompts.
 - Built using only HTML and CSS; no accounts or tracking.
 
-Read the full case study for background, process, and design rationale: [Case Study.md](Case%20Study.md)
+  # CASE STUDY
+
+Read the full case study for background, process, and design rationale: 
+- [Case Study.md](Case%20Study.md)
+- Case study by Nanji Lakan - https://medium.com/@Youtenstudio/sonder-8c10e8b65073
+- Case study by Florence Onwuegbuzie - https://medium.com/@florenceworkhub/designing-a-self-love-website-building-sonder-c1aad49c9240
 
 and a Sample of some of the designs we've played around with https://stitch.withgoogle.com/projects/10844331319545540294
 
@@ -24,6 +29,7 @@ Design & Implementation:
 ## Nanji Lakan and Florence Onwuegbuzie
 can be found in our google sheets at https://docs.google.com/spreadsheets/d/1BvVfKBTCzat4DLeq2cD9e1ykY8tQ7AD1aZLOSBxs9CI/edit?usp=sharing
 
+
 ---
 
 ## Style Guide — CSS variables
@@ -39,7 +45,6 @@ A brief reference for the CSS custom properties used across the project. Use the
 
 Guidelines
 - Prefer tokens over hard-coded colors when styling components.
-- Use `--hero-color` (set per page) for hero headings so navigation can match H1 color consistently.
-- For night theme exceptions, overrides live in `styles/themes.css`; affirmations cards are intentionally made light for readability.
+- For night theme exceptions, overrides live in `styles/themes.css`; affirmations cards, headings and nav are intentionally made light for readability.
 
 This is a short guide — see `styles/` for concrete implementations and `Design Documentation.md` for visual rationale.

@@ -3,8 +3,7 @@
 /* General container padding and spacing adjustments */
 @media (max-width: 1024px) {
   header, main { padding: 1rem 2rem; }
-  nav { width: 100%; }
-  .nav-center { display: none; }
+  nav { width: 60%; }
   .logo { font-size: 1.25rem; }
 
   .affirmation-cards-container { gap: 0.75rem; }
@@ -40,9 +39,4 @@
 
   /* auth/contact form adjustments */
   .auth-container, .contact-form { padding: 0.9rem; }
-}
-
-/* Utility: responsive max content width */
-@media (min-width: 1200px) {
-  main { max-width: 1100px; }
 }

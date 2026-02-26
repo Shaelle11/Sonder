@@ -1,7 +1,7 @@
 /* global layout */
 
 header {
-  padding: 1rem 4rem;
+  padding: 1rem 1.7rem 1rem 3rem;
   display: grid;
 }
 
@@ -21,8 +21,7 @@ margin: auto;
 }
 
 .nav-left,
-.nav-center,
-
+.nav-items,
 .nav-right {
   display: flex;
   align-items: center;
