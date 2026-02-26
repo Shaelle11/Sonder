@@ -230,14 +230,30 @@ body.time-page:not(.theme-night) {
   aspect-ratio: 4/3;
 }
 
-.card-icon svg {
+.card-icon{
+  width: 56px;
+  height: 56px;
+  background: var(--primary-assets-color);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
-
-.card:hover .card-icon svg {
+.card:hover .card-icon {
   transform: scale(1.1);
 }
- 
+.card-icon span {
+  font-size: 28px;
+  color: var(--primary-cream-color);
+}
+.card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 
  /* CHECKLIST ITEMS */
  .checklist{
@@ -292,7 +308,6 @@ justify-content: center;
   transform: translateY(-2px);
   color: var(--font-heading-beige);
 }
-
 
 
 footer p {

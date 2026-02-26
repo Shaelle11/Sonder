@@ -51,7 +51,7 @@ For full visual details and rationale, see [Design Documentation.md](Design%20Do
 Project structure (key files)
 
 - [index.html](index.html)
-- [styles/style.css](styles/style.css)
+- [styles/](styles/) base.css, layout.css, component.css, themes.css and index.css. 
 - [pages/](pages/): time capsule pages and moods
 
 ## Challenges & Tradeoffs

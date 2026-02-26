@@ -39,12 +39,13 @@
 }
  
 .auth-form input, .auth-form textarea {
-  padding: 0.75rem 1rem;
+   padding: 0.75rem 1rem;
   border-radius: 12px;
+  border: 2px solid var(--primary-assets-color);
   font-size: 1rem;
   font-family: var(--font-body);
   color: var(--text-color);
-  background: white;
+  background: var(--primary-cream-color);
   box-shadow: inset 0 -1px 0 rgba(33,28,40,0.04);
   border: 2px solid var(--primary-assets-color);
 }
@@ -105,5 +106,5 @@
 .auth-form input:focus,
 .auth-form textarea:focus {
   box-shadow: 0 0 0 3px rgba(232,158,184,0.12);
-  border: 2px solid var(--font-heading-beige);
+  border: 2px solid var(--primary-assets-color);
 }

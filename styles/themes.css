@@ -35,7 +35,7 @@
   --primary-lavender-glow: #0b1226;
   --primary-lavender-dreamy: #101424;
   --primary-assets-color: #7C8CFF;
-  --text-color: #13131c;
+  --text-color: #ffffff;
 }
 
 /* night header color */
@@ -92,4 +92,24 @@
   --primary-lavender-dreamy: #D5D9E0;
   --primary-assets-color: #8A94A6;
   --text-color: #1E232B;
+}
+
+/* Night-specific UI adjustments */
+.theme-night .footer-navigation {
+  /* prefer lavender-dreamy; fall back to assets color if lavender is dark */
+  background: var(--primary-lavender-dreamy, var(--primary-assets-color));
+  border-top-color: rgba(255,255,255,0.04);
+}
+
+.theme-night .footer-navigation a {
+  color: var(--text-color);
+}
+
+.theme-night .checklist-option {
+  background: var(--primary-lavender-dreamy, var(--primary-assets-color));
+  color: var(--text-color);
+}
+
+.theme-night .checklist-option input {
+  accent-color: var(--primary-assets-color);
 }
