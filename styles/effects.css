@@ -1,0 +1,104 @@
+#background-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: auto;
+  overflow: hidden;
+  z-index: -1;
+}
+.particle {
+  position: absolute;
+  bottom: -10vh;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+.dandelions {
+  background: url("../images/dandelion-seed.svg") no-repeat center;
+  background-size: contain;
+  animation: floatUp 20s linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(-120vh) rotate(360deg);
+  }
+}
+.bubbles {
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  animation: floatUp 25s ease-in-out infinite;
+}
+.fireflies {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fffacd 0%, transparent 70%);
+  border-radius: 50%;
+  animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+#rain-glass-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50px;
+  animation: rainFall linear infinite;
+}
+
+@keyframes rainFall {
+  from {
+    transform: translateY(-20vh);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(120vh);
+    opacity: 0.1;
+  }
+}
+
+.raindrop.heavy {
+  width: 4px;
+  height: 30px;
+  background: rgba(255,255,255,0.6);
+}
+
+.pop {
+  animation: popEffect 0.3s ease-out forwards;
+}
+
+@keyframes popEffect {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+#affirmation-popup {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-heading);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
