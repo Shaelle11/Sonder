@@ -46,33 +46,6 @@ nav{
   transform-origin: bottom left; /* Slides in from left */
 }
 
-/* Still in the works */
-/* MOBILE: details/summary (CSS-only hamburger) */
-summary.mobile-menu-summary {
-  list-style: none;
-  display: none;
-  background: transparent;
-  border: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: var(--text-color);
-}
-
-details.mobile-menu { position: relative; }
-  body.time-page .affirmation-card {
-    flex: 0 0 240px;
-    min-width: 200px;
-  }
-
-/* mobile behaviour */
-@media (max-width: 768px) {
-  .nav-center { display: none; }
-  summary.mobile-menu-summary { display: inline-flex; align-items: center; gap: .5rem; }
-  details.mobile-menu[open] .nav-center { display: flex; flex-direction: column; gap: .75rem; }
-  details.mobile-menu[open] .nav-center a { color: var(--text-color); font-weight: 600; }
-  details.mobile-menu[open] .cta { display: inline-block; margin-top: .5rem; }
-  details.mobile-menu[open] { position: absolute; left: 0; right: 0; top: 60px; background: var(--primary-cream-color); padding: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); z-index: 120; }
-}
 
 /* cta */
 .cta,
@@ -147,14 +120,30 @@ body.time-page:not(.theme-night) {
   aspect-ratio: 4/3;
 }
 
-.card-icon svg {
+.card-icon{
+  width: 56px;
+  height: 56px;
+  background: var(--primary-assets-color);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
-
-.card:hover .card-icon svg {
+.card:hover .card-icon {
   transform: scale(1.1);
 }
-
+.card-icon span {
+  font-size: 28px;
+  color: var(--primary-cream-color);
+}
+.card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 
  /* CHECKLIST ITEMS */
  .checklist{
@@ -209,7 +198,6 @@ justify-content: center;
   transform: translateY(-2px);
   color: var(--font-heading-beige);
 }
-
 
 
 footer p {

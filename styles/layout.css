@@ -28,7 +28,15 @@ margin: auto;
   align-items: center;
   gap: 2rem;
 }
-
+.feature-section {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.features{
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
 
 
  /* AFFIRMATION CARDS CONTAINER */
@@ -86,4 +94,10 @@ margin: auto;
 footer {
   text-align: center;
   padding: 3rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .features{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

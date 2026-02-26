@@ -11,7 +11,7 @@
     --primary-cream-color: #fdfbf7;
     --primary-lavender-glow: #f3e8ff;
     --primary-lavender-dreamy:#EBE4FF;
-    --primary-assets-color: #E7A1DA;
+    --primary-assets-color: #eabde2;
     --text-color:#211c28;
     --font-heading: 'Fraunces', serif;
     --warm-beige-tone: #ddcac2;
@@ -60,6 +60,7 @@ h3 {
 }
 /* paragraph */
 p  { font-size: 1rem;
-line-height: 1.7;
+ opacity: 0.7;
+  line-height: 1.7;
  }
 
