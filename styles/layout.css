@@ -94,8 +94,16 @@ footer {
   padding: 3rem 2rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .nav-items{
+    display: none;
+  }
+  .nav-right{
+    display: none;
+  }
+}
+@media (min-width: 769px) {
   .features{
     grid-template-columns: repeat(3, 1fr);
-  }
+  } 
 }
