@@ -86,10 +86,10 @@ function renderMood(selectedMood) {
     <main>
       <input type="checkbox" id="time-toggle" checked hidden>
       <aside id="time-rail" class="nav-items nav-rail" aria-label="time-rail">
-        <a href="../timeCapsule/morning.html" aria-label="Morning"><i class="ph-bold ph-sun" aria-hidden="true"></i></a>
-        <a href="../timeCapsule/afternoon.html" aria-label="Afternoon"><i class="ph-bold ph-sun-horizon" aria-hidden="true"></i></a>
-        <a href="../timeCapsule/evening.html" aria-label="Evening"><i class="ph-bold ph-moon" aria-hidden="true"></i></a>
-        <a href="../timeCapsule/night.html" aria-label="Night"><i class="ph-bold ph-moon-stars" aria-hidden="true"></i></a>
+        <a href="../timeCapsule.html" aria-label="Morning"><i class="ph-bold ph-sun" aria-hidden="true"></i></a>
+        <a href="../timeCapsule.html" aria-label="Afternoon"><i class="ph-bold ph-sun-horizon" aria-hidden="true"></i></a>
+        <a href="../timeCapsule.html" aria-label="Evening"><i class="ph-bold ph-moon" aria-hidden="true"></i></a>
+        <a href="../timeCapsule.html" aria-label="Night"><i class="ph-bold ph-moon-stars" aria-hidden="true"></i></a>
       </aside>
       <section class="content">
         <section class="mood-section">
