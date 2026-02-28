@@ -54,9 +54,10 @@ Project structure (key files)
 - [styles/](styles/) base.css, layout.css, component.css, themes.css and index.css. 
 - [pages/](pages/): time capsule pages and moods
 
+
 ## Challenges & Tradeoffs
-- Constraint of using only HTML/CSS meant no persisted state and no dynamic personalization—tradeoff accepted for simplicity and privacy.
 - Balancing emotion and clarity: designs must feel warm without becoming ambiguous; content tone was iterated to maintain helpfulness.
+- understanding how best to implement ideas and data calls across pages to improve modularity
 
 ## Results & Learnings
 - Outcome: a calm, private, and approachable micro-reflection experience that can be hosted easily on static platforms.
