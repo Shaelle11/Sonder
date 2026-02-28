@@ -136,7 +136,19 @@ function renderTime(time) {
  
  
 
-// Initialize default time
+// Detect user's device time of day
+function getTimeOfDay() {
+  const h = new Date().getHours();
+  if (h >= 5  && h < 12) return 'morning';
+  if (h >= 12 && h < 17) return 'afternoon';
+  if (h >= 17 && h < 21) return 'evening';
+  return 'night';
+}
+
+// On load: use time stored by auth pages, or fall back to device time
 document.addEventListener("DOMContentLoaded", () => {
-  renderTime("morning");
+  let time = sessionStorage.getItem('sonder_timeOfDay') || getTimeOfDay();
+  if (!timeData[time]) time = getTimeOfDay();
+  sessionStorage.setItem('sonder_timeOfDay', time);
+  renderTime(time);
 });

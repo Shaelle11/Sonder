@@ -24,6 +24,9 @@
     --paragraph-font-size: 1rem;
     --border-radius-card: 20px;
     --border-radius-btn: 40px;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --blur: blur(20px);
 }
 
 body {

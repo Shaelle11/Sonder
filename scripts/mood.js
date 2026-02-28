@@ -130,3 +130,11 @@ document.querySelectorAll(".footer-navigation a").forEach(link => {
     renderMood(link.dataset.mood);
   });
 });
+
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const mood = params.get('mood');
+  if (mood && moodData[mood]) {
+    renderMood(mood);
+  }
+})();

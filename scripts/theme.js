@@ -35,15 +35,12 @@ const MOOD_KEY = "sonder-mood";
 
 
 
-function getActiveTheme() {     //exclude default pages for themes
-  const defaultPages = ["index","about","contacts","signup","signin"]; 
-   if (!defaultPages.includes(document.body.dataset.page)) {
-                const savedMood = localStorage.getItem(MOOD_KEY);
-                if (savedMood) {
-                return savedMood; // Mood overrides time
-                }
-                return GetTime(); // Default landing if no mood selected
-}}
+function getActiveTheme() {
+  // Always determine an active theme: mood overrides time-of-day.
+  const savedMood = localStorage.getItem(MOOD_KEY);
+  if (savedMood) return savedMood;
+  return GetTime();
+}
 
 
 

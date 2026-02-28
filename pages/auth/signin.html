@@ -29,14 +29,23 @@
                 <a href="#" class="forgot-password">Forgot password?</a>
 
                
-                <a href="../../timeCapsule.html">
+                <a href="../timeCapsule.html">
                 <button class="cta" type="button">Sign in</button>    
         </a>
 
             <p class="muted">New here? <a href="signup.html">Create an account</a></p>
-                    <a class="guest-link" href="../../timeCapsule.html">Continue as guest</a>
+                    <a class="guest-link" href="../timeCapsule.html">Continue as guest</a>
         </form>
     </main>
-    <script src="../../scripts/theme.js"></script>
+        <script>
+        (function(){
+            try {
+                const h = new Date().getHours();
+                const time = (h >= 5 && h < 12) ? 'morning' : (h >= 12 && h < 17) ? 'afternoon' : (h >= 17 && h < 21) ? 'evening' : 'night';
+                sessionStorage.setItem('sonder_timeOfDay', time);
+            } catch (e){}
+        })();
+        </script>
+        <script src="../../scripts/theme.js"></script>
 </body>
 </html>
