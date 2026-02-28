@@ -13,10 +13,10 @@ function GetTime () {
     const hour = new Date().getHours();
     let TimeTheme = "";
 
-    if( hour >= 5 && hour <12){
+    if( hour >= 11 && hour <14){
         TimeTheme = "morning";
     }
-    else if(hour >= 12 && hour < 14){
+     if(hour >= 12 && hour < 14){
         TimeTheme = "afternoon";
     }
     else if(hour >= 14 && hour < 18){
@@ -69,102 +69,106 @@ function applyTheme(TimeTheme) {
 
 
   // FETCH THEME ON PAGE LOAD
-document.addEventListener("DOMContentLoaded", () => {
-  const activeTheme = getActiveTheme();  
-  applyTheme(activeTheme);
-});
+  document.addEventListener("DOMContentLoaded", () => {
+    // Ask user once whether they want site-wide time themes applied.
+    // Stored in sessionStorage so it resets between browser sessions;
+    let stored = null;
+    try { stored = sessionStorage.getItem('sonder_useTimeThemes'); } catch (e) { stored = null; }
 
+    if (stored === null) {
+      const message = 'Enable themes site-wide? choose Cancel to use default styles.';
+      const use = confirm(message);
+      try { sessionStorage.setItem('sonder_useTimeThemes', use ? '1' : '0'); } catch (e) {}
+      stored = use ? '1' : '0';
+    }
 
+    const useTimeThemes = stored === '1';
 
+    if (!useTimeThemes) {
+      // Ensure no theme classes are applied for default styles
+      document.body.classList.remove(
+        'theme-morning','theme-afternoon','theme-evening','theme-night',
+        'theme-driven','theme-relaxed','theme-anxious','theme-tired'
+      );
+      // Do not apply time/mood theme
+      return;
+    }
 
-//ASSIGN SAME DATA ATTRIBUTE TO MOOD BUTTONS, TO GET MOOD-VALUE ON CLICK
-document.querySelectorAll("[data-mood]").forEach(button => {
-  button.addEventListener("click", () => {
-    const mood = button.dataset.mood;
-
-    localStorage.setItem(MOOD_KEY, mood);
-    applyTheme(mood);
+    const activeTheme = getActiveTheme();
+    applyTheme(activeTheme);
   });
-});
+
+
+// const themeEffects = {
+//   morning: "bees",
+//   afternoon: "petals",
+//   evening: "dandelions",
+//   night: "fireflies",
+//   default: "bubbles"
+// };
+
+
+// function applyBackgroundEffect(TimeTheme) {
+//   const backgroundLayer = document.getElementById("background-layer");
+//   const rainLayer = document.getElementById("rain-glass-layer");
+
+//   backgroundLayer.innerHTML = "";
+//   rainLayer.innerHTML = "";
+
+//   if (TimeTheme === "tired") {
+//     generateRain();
+//   } else {
+//     generateParticles(TimeTheme);
+//   }
+// }
 
 
 
+// applyBackgroundEffect("default");
+
+// function generateParticles(type) {
+//   const layer = document.getElementById("background-layer");
+
+//   for (let i = 0; i < 10; i++) {
+//     const particle = document.createElement("div");
+//     particle.classList.add("particle", type);
+
+//     particle.dataset.affirmation = getRandomAffirmation();
+
+//     particle.style.left = Math.random() * 100 + "vw";
+//     particle.style.animationDelay = Math.random() * 10 + "s";
+
+//     particle.addEventListener("click", revealAffirmation);
+
+//     layer.appendChild(particle);
+//   }
+// }
 
 
+// function getRandomAffirmation() {
+//   return affirmations[Math.floor(Math.random() * affirmations.length)];
+// }
 
+// function revealAffirmation(e) {
+//   const particle = e.target;
+//   const message = particle.dataset.affirmation;
 
+//   particle.classList.add("pop");
 
+//   showAffirmationText(message);
 
-const themeEffects = {
-  morning: "bees",
-  afternoon: "petals",
-  evening: "dandelions",
-  night: "fireflies",
-  default: "bubbles"
-};
+//   setTimeout(() => {
+//     particle.remove();
+//   }, 300);
+// }
 
+// function showAffirmationText(text) {
+//   const popup = document.getElementById("affirmation-popup");
 
-function applyBackgroundEffect(TimeTheme) {
-  const backgroundLayer = document.getElementById("background-layer");
-  const rainLayer = document.getElementById("rain-glass-layer");
+//   popup.textContent = text;
+//   popup.style.opacity = "1";
 
-  backgroundLayer.innerHTML = "";
-  rainLayer.innerHTML = "";
-
-  if (TimeTheme === "tired") {
-    generateRain();
-  } else {
-    generateParticles(TimeTheme);
-  }
-}
-
-
-
-applyBackgroundEffect("default");
-
-function generateParticles(type) {
-  const layer = document.getElementById("background-layer");
-
-  for (let i = 0; i < 10; i++) {
-    const particle = document.createElement("div");
-    particle.classList.add("particle", type);
-
-    particle.dataset.affirmation = getRandomAffirmation();
-
-    particle.style.left = Math.random() * 100 + "vw";
-    particle.style.animationDelay = Math.random() * 10 + "s";
-
-    particle.addEventListener("click", revealAffirmation);
-
-    layer.appendChild(particle);
-  }
-}
-
-
-function getRandomAffirmation() {
-  return affirmations[Math.floor(Math.random() * affirmations.length)];
-}
-
-function revealAffirmation(e) {
-  const particle = e.target;
-  const message = particle.dataset.affirmation;
-
-  particle.classList.add("pop");
-
-  showAffirmationText(message);
-
-  setTimeout(() => {
-    particle.remove();
-  }, 300);
-}
-
-function showAffirmationText(text) {
-  const popup = document.getElementById("affirmation-popup");
-
-  popup.textContent = text;
-  popup.style.opacity = "1";
-
-  setTimeout(() => {
-    popup.style.opacity = "0";
-  }, 4000);
-}
+//   setTimeout(() => {
+//     popup.style.opacity = "0";
+//   }, 4000);
+// }
