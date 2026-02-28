@@ -1,51 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
-        <link rel="stylesheet" href="../../styles/base.css" />
-        <link rel="stylesheet" href="../../styles/auth.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — Sonder</title>
+  <link rel="stylesheet" href="../../styles/base.css" />
+  <link rel="stylesheet" href="../../styles/auth.css" />
 </head>
+
 <body data-page="signin">
-     <div id="background-layer" aria-hidden="true"></div>
-     <div id="rain-glass-layer" aria-hidden="true"></div>
-    <header>
-        <a href="../../index.html" class="logo">Sonder</a>
-    </header>
-    <main class="auth-container">
-        <h1>Sign in</h1>
+  <div id="background-layer" aria-hidden="true"></div>
+  <div id="rain-glass-layer" aria-hidden="true"></div>
 
-        <form class="auth-form" action="#" method="post" aria-label="Sign in">
-            <fieldset class="form-row">
-                <label for="si-email">Email</label>
-                <input id="si-email" name="email" type="email" required />
-            </fieldset>
+  <header>
+    <a href="../../index.html" class="logo">Sonder</a>
+  </header>
 
-            <fieldset class="form-row">
-                <label for="si-password">Password</label>
-                <input id="si-password" name="password" type="password" required />
-            </fieldset>
-                <a href="#" class="forgot-password">Forgot password?</a>
+  <main class="auth-container">
+    <h1>Sign in</h1>
 
-               
-                <a href="../timeCapsule.html">
-                <button class="cta" type="button">Sign in</button>    
-        </a>
+    <form class="auth-form" id="signinForm" novalidate>
+    <fieldset class="form-row">
+        <label for="si-email">Email</label>
+        <input id="si-email" name="email" type="text" />
+        <p class="form-error" id="si-email-error" aria-live="polite"></p>
+    </fieldset>
 
-            <p class="muted">New here? <a href="signup.html">Create an account</a></p>
-                    <a class="guest-link" href="../timeCapsule.html">Continue as guest</a>
-        </form>
-    </main>
-        <script>
-        (function(){
-            try {
-                const h = new Date().getHours();
-                const time = (h >= 5 && h < 12) ? 'morning' : (h >= 12 && h < 17) ? 'afternoon' : (h >= 17 && h < 21) ? 'evening' : 'night';
-                sessionStorage.setItem('sonder_timeOfDay', time);
-            } catch (e){}
-        })();
-        </script>
-        <script src="../../scripts/theme.js"></script>
+    <fieldset class="form-row">
+        <label for="si-password">Password</label>
+        <input id="si-password" name="password" type="password" />
+        <p class="form-error" id="si-password-error" aria-live="polite"></p>
+    </fieldset>
+
+    <button class="cta" type="submit">Sign in</button>
+
+    <p class="muted">
+        New here? <a href="signup.html">Create an account</a>
+    </p>
+
+    <a class="guest-link" href="../timeCapsule.html">Continue as guest</a>
+</form>
+  </main>
+
+  <script src="../../scripts/auth.js"></script>
+  <script src="../../scripts/theme.js"></script>
 </body>
 </html>

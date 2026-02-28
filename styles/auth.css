@@ -1,11 +1,12 @@
 /* Auth pages styles — uses root tokens */
-*{
+* {
   border: none;
   outline: none;
   padding: 0;
 }
-.auth-page
-.auth-container { font-family: var(--font-body); 
+
+.auth-page .auth-container {
+  font-family: var(--font-body);
 }
 
 .auth-container {
@@ -17,29 +18,32 @@
   text-align: left;
 }
 
-
-/* smaller heading for auth entry */
-
-.auth-container h1 { font-size: 1.6rem; }
-
-
-
-.auth-form .form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+/* Smaller heading for auth entry */
+.auth-container h1 {
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
+/* Form rows */
+.auth-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* smaller gap between input and error */
+  margin-bottom: 0.75rem; /* compact spacing between rows */
+}
+
+/* Labels */
 .auth-form label {
-  margin: 1rem 0 0.5rem 0;
+  margin: 0.5rem 0 0.25rem 0; /* tighter top/bottom margin */
   text-align: left;
   font-weight: 600;
   color: var(--text-color);
 }
- 
-.auth-form input, .auth-form textarea {
-   padding: 0.75rem 1rem;
+
+/* Inputs and textareas */
+.auth-form input,
+.auth-form textarea {
+  padding: 0.65rem 0.85rem; /* slightly smaller padding for compactness */
   border-radius: 12px;
   border: 2px solid var(--primary-assets-color);
   font-size: 1rem;
@@ -47,53 +51,63 @@
   color: var(--text-color);
   background: var(--primary-cream-color);
   box-shadow: inset 0 -1px 0 rgba(33,28,40,0.04);
-  border: 2px solid var(--primary-assets-color);
 }
+
+/* Muted text */
 .auth-form input,
 .auth-form .muted {
   color: rgba(33,28,40,0.6);
   font-size: 0.95rem;
 }
-.auth-form .muted a { 
-  color: var(--primary-assets-color); 
-  text-decoration: none; }
 
+.auth-form .muted a {
+  color: var(--primary-assets-color);
+  text-decoration: none;
+}
 
-.auth-actions { 
-  display:flex; 
-  flex-direction:column;
-   gap:0.9rem;
-    align-items:center; 
-  }
-.auth-actions .auth-cta { 
-  width: 120px; 
-  display:inline-block;
-   text-align:center;
-   }
+/* Actions container */
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+}
 
+.auth-actions .auth-cta {
+  width: 120px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Links */
 .forgot-password {
   font-size: 0.9rem;
   color: var(--primary-assets-color);
   text-decoration: none;
-  margin-top: -0.5rem;
+  margin-top: -0.3rem;
   display: block;
 }
+
 .guest-link {
-   text-decoration: none;
-    font-size: 0.95rem; 
-    color: var(--primary-assets-color); 
-    font-weight:500; opacity:1;
-     transition: opacity 0.2s ease; 
-     display:block; text-align:center; 
-     padding-top:0.35rem; 
-    }
-.guest-link:hover { 
-  opacity:0.6; 
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--primary-assets-color);
+  font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  display: block;
+  text-align: center;
+  padding-top: 0.25rem;
 }
 
+.guest-link:hover {
+  opacity: 0.6;
+}
+
+/* CTA buttons */
 .auth-form .cta {
   display: inline-block;
-  padding: 0.9rem 1.6rem;
+  padding: 0.85rem 1.5rem;
   border-radius: var(--border-radius-btn);
   background-color: var(--primary-assets-color);
   color: var(--primary-cream-color);
@@ -102,9 +116,17 @@
   cursor: pointer;
 }
 
-/* Input focus styling to match contact form */
+/* Input focus styling */
 .auth-form input:focus,
 .auth-form textarea:focus {
   box-shadow: 0 0 0 3px rgba(232,158,184,0.12);
   border: 2px solid var(--primary-assets-color);
+}
+
+/*per-field error messages*/
+.form-error {
+  color: #c0392b;
+  font-size: 0.75rem;
+  margin: 0.15rem 0 0;
+  min-height: 1em; 
 }
