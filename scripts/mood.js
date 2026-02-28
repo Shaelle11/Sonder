@@ -136,21 +136,16 @@ function renderMood(selectedMood) {
   const MainContent = document.getElementById("main-content");
   MainContent.innerHTML = `
     <header class="top-header">
-      <nav><a href="../index.html" class="logo">Sonder</a></nav>
-      <label for="time-toggle" class="nav-rail-toggle" aria-controls="time-rail" aria-expanded="true">
-        <i class="ph-bold ph-clock" aria-hidden="true"></i>
-      </label>
+      <nav class="affirmation-nav">
+        <a href="../index.html" class="logo">Sonder</a>
+        <a href="timeCapsule.html" class="time-switch"> 
+             <i class="ph-bold ph-clock" aria-hidden="true"></i>
+        </a>
+      </nav>
     </header>
 
     <main>
-      <input type="checkbox" id="time-toggle" checked hidden>
-      <aside id="time-rail" class="nav-items nav-rail" aria-label="time-rail">
-        <a href="timeCapsule.html" aria-label="Morning"><i class="ph-bold ph-sun" aria-hidden="true"></i></a>
-        <a href="timeCapsule.html" aria-label="Afternoon"><i class="ph-bold ph-sun-horizon" aria-hidden="true"></i></a>
-        <a href="timeCapsule.html" aria-label="Evening"><i class="ph-bold ph-moon" aria-hidden="true"></i></a>
-        <a href="timeCapsule.html" aria-label="Night"><i class="ph-bold ph-moon-stars" aria-hidden="true"></i></a>
-      </aside>
-
+      
       <section class="content">
         <section class="mood-section">
           <h1 class="hero-header">${data.heroText}</h1>

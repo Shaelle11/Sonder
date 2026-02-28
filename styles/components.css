@@ -1,4 +1,6 @@
-
+/* .top-header{display: flex;
+    width: 60%;
+    justify-content: space-between;} */
 
 nav{
     display: flex;
@@ -7,6 +9,11 @@ nav{
  
 }
 
+.affirmation-nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 /* logo */
 
 .logo {
@@ -16,6 +23,14 @@ nav{
   text-decoration: none;
   color: var(--primary-assets-color);
 
+}
+
+.time-switch{
+  cursor: pointer;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  align-self: flex-end;
 }
 
 /* nav-links */
@@ -127,10 +142,7 @@ width: auto;
   transition: max-height 360ms cubic-bezier(.2,.9,.2,1), transform 280ms ease, opacity 200ms ease;
   margin: 3rem 0rem 0rem 2rem;
 }
-.nav-rail-toggle{
-  cursor: pointer;
-  font-size: 25px;
-}
+
 .nav-rail i {
 font-size: 22px;
 line-height: 1;

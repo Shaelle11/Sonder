@@ -139,25 +139,12 @@ function renderTime(time) {
   const MainContent = document.getElementById("main-content");
   MainContent.innerHTML = `
     <header class="top-header">
-         <nav><a href="../index.html" class="logo">Sonder</a></nav>
-         <label for="time-toggle" class="nav-rail-toggle" aria-controls="time-rail" aria-expanded="true">
-            <i class="ph-bold ph-clock" aria-hidden="true"></i>
-          </label>
+         <nav class="affirmation-nav">
+        <a href="../index.html" class="logo">Sonder</a>
+      </nav>
     </header>
 
     <main>
-        <input type="checkbox" id="time-toggle" checked hidden>
-        <aside class="nav-items nav-rail" aria-label="time-rail">
-             ${Object.keys(timeData).map(t => `
-               <a href="#" data-time="${t}" ${t === time ? 'aria-current="page"' : ''}>
-               <i class="ph-bold ${
-              t === 'morning' ? 'ph-sun' :
-              t === 'afternoon' ? 'ph-sun-horizon' :
-              t === 'evening' ? 'ph-moon' : 'ph-moon-stars'
-              }"></i>
-              </a>
-        `).join('')}
-       </aside>
       <section class="content">
         <section class="mood-section">
           <h1 class="hero-header">${data.heroText}</h1>
