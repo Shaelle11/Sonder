@@ -113,3 +113,5 @@
 .theme-night .checklist-option input {
   accent-color: var(--primary-assets-color);
 }
+
+.theme-night #affirm-text{color: var(--text-color)}
