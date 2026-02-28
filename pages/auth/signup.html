@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sign Up — Sonder</title>
-    <link rel="stylesheet" href="../../styles/base.css" />
-    <link rel="stylesheet" href="../../styles/auth.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up — Sonder</title>
+  <link rel="stylesheet" href="../../styles/base.css" />
+  <link rel="stylesheet" href="../../styles/auth.css" />
 </head>
-<body class="auth-page">
-     <header >
-     
 
-        <a href="../../index.html" class="logo">Sonder</a>
+<body data-page="signup" class="auth-page">
+  <div id="background-layer" aria-hidden="true"></div>
+  <div id="rain-glass-layer" aria-hidden="true"></div>
 
+  <header>
+    <a href="../../index.html" class="logo">Sonder</a>
+  </header>
 
-    </header>
-    <main class="auth-container">
-        <h1>Create an account</h1>
+  <main class="auth-container">
+    <h1>Create an account</h1>
 
-        <form class="auth-form" action="#" method="post" aria-label="Sign up">
-            <fieldset class="form-row">
-                <label for="su-name">Full name</label>
-                <input id="su-name" name="name" type="text" required />
-            </fieldset>
+   <form class="auth-form" id="signupForm" novalidate>
+    <fieldset class="form-row">
+        <label for="su-name">Full name</label>
+        <input id="su-name" name="name" type="text" />
+        <p class="form-error" id="su-name-error" aria-live="polite"></p>
+    </fieldset>
 
-            <fieldset class="form-row">
-                <label for="su-email">Email</label>
-                <input id="su-email" name="email" type="email" required />
-            </fieldset>
+    <fieldset class="form-row">
+        <label for="su-email">Email</label>
+        <input id="su-email" name="email" type="text" />
+        <p class="form-error" id="su-email-error" aria-live="polite"></p>
+    </fieldset>
 
-            <fieldset class="form-row">
-                <label for="su-password">Password</label>
-                <input id="su-password" name="password" type="password" required minlength="8" />
-            </fieldset>
-                   <a href="#" class="forgot-password">Forgot password?</a>
-                   
-                <a href="../timeCapsule/morning.html">
-                <button class="cta" type="button">Create account</button>
-                
-        </a>
-                
-        
+    <fieldset class="form-row">
+        <label for="su-password">Password</label>
+        <input id="su-password" name="password" type="password" />
+        <p class="form-error" id="su-password-error" aria-live="polite"></p>
+    </fieldset>
 
-            <p class="muted">Already have an account? <a href="signin.html">Sign in</a></p>
-               <a class="guest-link" href="../timeCapsule/morning.html">Continue as guest</a>
-        </form>
-    </main>
+    <button class="cta" type="submit">Create account</button>
+
+    <p class="muted">
+        Already have an account? <a href="signin.html">Sign in</a>
+    </p>
+
+    <a class="guest-link" href="../timeCapsule.html">Continue as guest</a>
+</form>
+  </main>
+
+  <script src="../../scripts/auth.js"></script>
+  <script src="../../scripts/theme.js"></script>
 </body>
 </html>

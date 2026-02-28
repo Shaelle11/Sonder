@@ -1,0 +1,416 @@
+#background-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: auto;
+  overflow: hidden;
+  z-index: -1;
+}
+#background-effects {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Particle color should follow theme `--primary-assets-color` by default.
+   Use `currentColor` on particles so themes can override via `color` on the container. */
+#background-effects, #background-layer {
+  color: var(--primary-assets-color, #ffffff);
+}
+
+.particle {
+  background: currentColor;
+}
+
+/* Night theme: particles use --text-color for better contrast */
+.theme-night #background-effects,
+.theme-night #background-layer {
+  color: var(--text-color, #ffffff);
+}
+.particle {
+  position: absolute;
+  bottom: -10vh;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+/* Generic subtle float */
+.particle {
+  transition: transform 0.6s linear, opacity 0.3s linear;
+}
+
+/* Bees: small warm dots that drift slowly */
+.bees {
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff6cc, #ffd480 60%);
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
+  animation: drift 18s linear infinite;
+}
+
+/* Petals: soft shapes */
+.petals {
+  background: url("../images/effects/flower.svg") no-repeat center;
+  background-size: contain;
+  animation: drift 20s ease-in-out infinite;
+}
+
+/* Clouds: larger, slower, low-opacity */
+.clouds {
+  background: radial-gradient(circle at 40% 30%, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border-radius: 50%;
+  animation: slowDrift 40s linear infinite;
+}
+
+/* Energy lines: thin upward particles */
+.energy {
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  width: 2px;
+  height: 30px;
+  animation: rise 10s linear infinite;
+}
+
+/* Embers for anxious mood */
+.embers {
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff1c6 0%, #ff8a5c 60%);
+  border-radius: 50%;
+  animation: flicker 4s ease-in-out infinite;
+}
+
+.dandelions {
+  background: url("../images/effects/dandelion-seed.svg") no-repeat center;
+  background-size: contain;
+  animation: floatUp 20s linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(-120vh) rotate(360deg);
+  }
+}
+
+@keyframes drift {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); }
+  50% { transform: translateY(-30vh) translateX(8vw) rotate(15deg); }
+  100% { transform: translateY(-60vh) translateX(-6vw) rotate(0deg); }
+}
+
+@keyframes slowDrift {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-10vh) translateX(6vw); }
+  100% { transform: translateY(-20vh) translateX(-6vw); }
+}
+
+@keyframes rise {
+  0% { transform: translateY(40vh); opacity: 0.2 }
+  50% { opacity: 0.6 }
+  100% { transform: translateY(-20vh); opacity: 0 }
+}
+.bubbles {
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  animation: floatUp 25s ease-in-out infinite;
+}
+.fireflies {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fffacd 0%, transparent 70%);
+    background: url("../images/effects/firefly.svg") no-repeat center;
+  border-radius: 50%;
+  animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+#rain-glass-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50px;
+  animation: rainFall linear infinite;
+}
+
+@keyframes rainFall {
+  from {
+    transform: translateY(-20vh);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(120vh);
+    opacity: 0.1;
+  }
+}
+
+.raindrop.heavy {
+  width: 4px;
+  height: 30px;
+  background: rgba(255,255,255,0.6);
+}
+
+/* Raindrop size/behavior variations */
+.raindrop.small {
+  width: 1.5px;
+  height: 12px;
+  background: rgba(255,255,255,0.28);
+  animation-duration: 1.6s;
+}
+.raindrop.medium {
+  width: 2.5px;
+  height: 20px;
+  background: rgba(255,255,255,0.38);
+  animation-duration: 2.4s;
+}
+.raindrop.large {
+  width: 4px;
+  height: 34px;
+  background: rgba(255,255,255,0.58);
+  animation-duration: 3.2s;
+}
+
+.raindrop.streak {
+  filter: blur(0.6px) saturate(0.9);
+  opacity: 0.9;
+}
+
+.pop {
+  animation: popEffect 0.3s ease-out forwards;
+}
+
+@keyframes popEffect {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+
+  #background-effects .particle:nth-child(2n) { display: none; }
+
+
+  #background-effects .particle {
+    transform-origin: center;
+    opacity: 0.45 !important;
+    width: calc(var(--particle-base-size, 12px) * 0.7) !important;
+    height: calc(var(--particle-base-size, 12px) * 0.7) !important;
+    pointer-events: auto;
+  }
+
+  .raindrop { opacity: 0.35; }
+  .raindrop.large { display: none; }
+
+  .bees, .petals, .dandelions, .clouds, .embers, .energy, .bubbles {
+    animation-duration: calc(var(--animation-duration, 20s) * 1.35) !important;
+  }
+}
+#affirmation-popup {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-heading);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+
+/* ── Dreamy animated gradient backgrounds for time + mood pages ── */
+.theme-morning,
+.theme-afternoon,
+.theme-evening,
+.theme-night,
+.theme-driven,
+.theme-relaxed,
+.theme-anxious,
+.theme-tired {
+  background-size: 400% 400% !important;
+  animation: dreamyGradient 15s ease infinite;
+}
+
+.theme-morning  { background: linear-gradient(-45deg, #fff7e8, #ffd6a0, #ffb347, #ffe3b3) !important; }
+.theme-afternoon{ background: linear-gradient(-45deg, #fff1d6, #ffc46b, #e89b2c, #ffd18a) !important; }
+.theme-evening  { background: linear-gradient(-45deg, #f1ecf8, #c7b9ea, #9b8ad6, #dcd2f1) !important; }
+.theme-night    { background: linear-gradient(-45deg, #0f1724, #101424, #1a2040, #0b1226) !important; }
+.theme-driven   { background: linear-gradient(-45deg, #667eea, #764ba2, #b5d5ff, #3b82f6) !important; }
+.theme-relaxed  { background: linear-gradient(-45deg, #a8edea, #bfe7d5, #4db6ac, #d5f1e4) !important; }
+.theme-anxious  { background: linear-gradient(-45deg, #fed6e3, #ffc2c7, #f87171, #ffecd2) !important; }
+.theme-tired    { background: linear-gradient(-45deg, #d5d9e0, #e3e6eb, #8a94a6, #f4f5f7) !important; }
+
+@keyframes dreamyGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Hero header fade-in ── */
+.hero-header {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  font-family: 'Playfair Display', 'Fraunces', serif;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Floating affirmation card with blurred image overlay ── */
+.floating-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px) brightness(0.55);
+  border-radius: 24px;
+  transition: background-image 0.8s ease;
+}
+
+.floating-card p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', 'Fraunces', serif;
+  opacity: 1;
+  padding: 1.5rem 1.5rem 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ── New Affirmation button ── */
+.affirm-btn {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 40px;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.affirm-btn:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-2px);
+}
+
+/* ── Glass cards ── */
+.affirmation-card,
+.checklist-section {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 480px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.affirmation-card:hover,
+.checklist-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+}
+
+/* ── Add-item row ── */
+.add-item-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.add-item-row input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 40px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  color: inherit;
+  font-size: 0.95rem;
+}
+.add-item-row input::placeholder { opacity: 0.6; }
+.add-item-row button {
+  padding: 0.6rem 1rem;
+  border-radius: 40px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.2);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.add-item-row button:hover { background: rgba(255,255,255,0.4); }
+
+/* ── Remove button on checklist items ── */
+.checklist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.remove-item {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+  color: inherit;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  transition: opacity 0.2s, background 0.2s;
+}
+.remove-item:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.2);
+}
+
+/* ── Collapsible suggestions ── */
+details.checklist-section summary {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  list-style: none;
+  padding: 0.25rem 0;
+  opacity: 0.8;
+}
+details.checklist-section summary::-webkit-details-marker { display: none; }
+details[open].checklist-section summary::before { content: ''; }
+
