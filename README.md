@@ -60,6 +60,12 @@ This section documents the lightweight client-side JavaScript added as progressi
 	- `scripts/mood.js`: reads the mood selection (URL `?mood=` or button), renders mood-specific content, and shares the same checklist persistence helpers as the time capsule.
 	- `pages/auth/signin.html` and `pages/auth/signup.html`: write the user's chosen or detected time into `sessionStorage` to influence the first time-capsule view.
 
+
+- Auth-specific flow (what changed)
+	1. When a user opens a sign-in or sign-up page the script detects the device hour (or reads a small selection UI) and writes `sessionStorage.sonder_timeOfDay` with the resolved key (`morning|afternoon|evening|night`).
+	2. After successful auth or continuation, navigation to `pages/timeCapsule.html` reads that session key and `renderTime()` shows the matching capsule immediately (no extra user step).
+	3. The session key is intentionally short-lived: it seeds the initial view for the session but does not write server-side state.
+
 - Storage keys (what is persisted and where)
 	- sessionStorage
 		- `sonder_timeOfDay` — ephemeral preference for which time capsule to show this session.
